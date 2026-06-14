@@ -3,6 +3,7 @@ from typing import Any
 import os
 import numpy as np
 import random
+import time
 
 import tensorflow as tf
 
@@ -170,4 +171,5 @@ useSeed = 10
 compressed = compressText(stringToEncode, useSeed)
 decompressed = decompressText(compressed, useSeed)
 
-print(stringToEncode==decompressed, decompressed)
+print(f"Results equal? {stringToEncode==decompressed}")
+print(decompressed)
