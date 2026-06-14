@@ -1,0 +1,179 @@
+
+
+
+Limusaurus is a genus of theropod dinosaur that lived in what is now China during the Late Jurassic, around 161Â to 157Â million years ago. The type and only species Limusaurus inextricabilis was described in 2009 from specimens found in the Upper Shishugou Formation in the Junggar Basin of China. The genus name consists of the Latin words for "mud" and "lizard", and the species name means "impossible to extricate", both referring to these specimens possibly dying after being mired. Limusaurus was a small, slender animal, about 1.7Â m (5Â ft 7Â in) in length and 15Â kg (33Â lb) in weight, which had a long neck and legs but very small forelimbs (with reduced first and fourth fingers). It underwent a drastic morphological transformation as it aged: while juveniles were toothed, these teeth were completely lost and replaced by a beak with age. Several of these features were convergently similar to the later ornithomimid theropods as well as the earlier non-dinosaurian shuvosaurids.
+
+
+Limusaurus was the first known member of the group Ceratosauria from Asia. It belonged to the Noasauridae, a family of small and lightly built ceratosaurs, along with its closest relative Elaphrosaurus. The pattern of digit reduction in Limusaurus has been used to support the hypothesis that the three-fingered hand of tetanuran theropods is the result of the loss of the first and fifth digits from the ancestral five-fingered theropod hand, a contested hypothesis which is relevant to the evolution of birds. The change to toothlessness in adults probably corresponded to a dietary shift from omnivory to herbivory, which is confirmed by the presence of gastroliths (stomach stones) in adults. Since many specimens were found together, it is possible Limusaurus lived in groups. Its fossils were discovered in rocks dated to the Oxfordian age. Specimens of Limusaurus (along with other small animals) appear to have been mired in mud pits created by the footprints of giant sauropod dinosaurs.
+
+
+Discovery and naming
+
+Between 2001 and 2006, a Chinese-American team of paleontologists examining the Wucaiwan locality in the Shishugou Formation, in the northeastern Junggar Basin of Xinjiang, China, discovered three bone beds (numbered TBBÂ 2001, TBBÂ 2002, and TBBÂ 2005, found by T. Yu and J. Mo). The bone beds were dominated by the remains of small theropod dinosaurs, representing at least three genera, with most belonging to a small ceratosaur, the first member of this group found in Asia. Stacked skeletons from these bone beds were removed from the field in blocks, jacketed by plaster, and encased in crates. A resin cast of block TBBÂ 2001 was made, making it available for study after the specimens had been extracted from the original matrix. Except one, all specimens from this block are mounted in a cast of the block in its semi-prepared state.
+
+
+In 2009, the small ceratosaur was described by paleontologist Xu Xing and colleagues, who named it Limusaurus inextricabilis. The genus name consists of the words limus, Latin for "mud" or "mire", and saurus, Greek for "lizard", and the species name means "impossible to extricate"; both names refer to how these specimens appear to have died after being mired. The name has also been translated as "mire lizard who could not escape". The description incorporated data from two specimens both stored at the Institute of Vertebrate Paleontology and Paleoanthropology (IVPP) in Beijing: the holotype (a subadult cataloged under the specimen number IVPPÂ VÂ 15923) is an almost complete and articulated (still connected) skeleton, missing only the hindmost tail vertebrae, and is preserved next to another specimen (a large juvenile, IVPPÂ VÂ 20098) which is missing the front part of the skeleton. The other (an adult, IVPPÂ VÂ 15304, inaccurately referred to by the number IVPPÂ VÂ 16134 in the original description) is a likewise almost complete and articulated specimen that is missing only the skull, and is larger than the holotype.
+
+
+Seventeen additional Limusaurus specimens were described by paleontologist Shuo Wang and colleagues in 2017, excavated from the same blocks as those described in 2009. These specimens include six juveniles (one year in age or less), ten subadults (two to six years in age), and one adult (more than six years in age). These specimens are also stored at the IVPP. The toothless adults and toothed juveniles were initially thought to be different kinds of dinosaurs, and were studied separately, until it was realized they represent the same species.
+
+
+Description
+
+Limusaurus was a small and slender animal. The holotype (which was originally considered an adult based on the level of fusion of its bones, but later as a subadult when analyzed along with other specimens) is estimated to have been about 1.7Â m (5Â ft 7Â in) in length and the weight of the animal has been estimated at 15Â kg (33Â lb). One adult specimen is estimated to have been 15% larger than the holotype. Several features of the animal, such as the small head with large orbits (eye openings), toothless jaws, and the long neck and legs, were very similar to the ornithomimid theropods of the Cretaceous, as well as the Triassic non-dinosaurian shuvosaurids, representing a significant case of convergent evolution among these three distinct groups of archosaurs. While Limusaurus has sometimes been depicted with feathers and may have had them, there is no direct evidence of such structures.
+
+
+Skull
+
+The skull of Limusaurus was relatively tall and short, roughly half the length of the femur (upper thigh bone). The tip of its jaws was covered by a beak, a feature that was previously unknown in non-coelurosaurian theropods like Limusaurus (the coelurosaurs include the most bird-like dinosaurs). As in most dinosaurs, the skull featured five principal fenestrae (openings): the external naris (bony nostril), orbit, antorbital fenestra (between the nostril and eye), as well as the upper and lower temporal fenestra (on the top and on the side of the skull's rear, respectively). As in other ceratosaurians, parts of the bony nostril were formed by the maxilla (upper jaw bone); also, the antorbital fenestra was proportionally small, and the rear part of the nasal bone formed parts of the cavity which contained this opening. The external naris was large and located in a hindwards position, similar to tetanuran theropods. The orbit was large, while the lateral temporal fenestra was not as large as would be expected from more derived (or "advanced") members of the Ceratosauria. Uniquely to Limusaurus, the inner bottom edge of the premaxilla, the frontmost bone of the upper jaw, was convex. The nasal bone was distinct in having a "shelf" on its side, was short, wide, less than one-third of the length of the skull roof, and twice as long as it was wide. The lower part of the lacrimal, the bone that formed the front margin of the eye opening, was unique in being strongly inclined forwards. The jugal bone, which formed the floor of the eye opening, was slender, and its rami (or branches) were rod-like, which is also unique to this genus.
+
+
+The lower jaw of ceratosaurians was pierced by a generally large mandibular fenestra. In Limusaurus, it was especially large, accounting for 40% of the length of the entire lower jaw, a distinguishing feature of the genus. The dentary (tooth-bearing bone at the front of the lower jaw) was short compared to the rest of the lower jaw, as in other ceratosaurians. The front end of the dentary was down-turned and had a convex inner margin, similar to the related Masiakasaurus. The angular bone of the lower jaw was positioned significantly forwards in relation to the hind end of the mandible, similar to other ceratosaurians. Juveniles had nine teeth in each side of the upper jaw and twelve in each side of the lower; they were gradually lost as they grew, disappearing by adulthood.
+
+
+Postcranial skeleton
+
+The cervicals (neck vertebrae) of Limusaurus were elongated as in the closely related Elaphrosaurus, and the neck itself was long. The axis (second neck vertebra) lacked the pleurocoel (excavation) on its front end and the foramina (openings) in its neural arch that are seen in derived ceratosaurians. As in other noasaurids, the neural spines of the cervicals were positioned more towards the front end of their vertebrae than is the case in other theropods.
+
+
+Distinctively, the scapula (shoulder blade) bore a prominent ridge at its front edge. It also had a comparatively high acromion process. The sternum was fused into a single, large, continuous plate, another feature that evolved independently in coelurosaurs (convergent evolution). Limusaurus also had a furcula, or wishbone, which previously was unknown among ceratosaurians. The head of the humerus (upper arm bone) was bulging, and the deltopectoral crest, a forward-directed bony flange of the humerus that served for muscle attachment, was long and angled; these features were typical for ceratosaurians. In the forearm, the radius was longer than the ulna, and the olecranon process, a bony extension on the upper end of the ulna that served for muscle attachment, was absent in Limusaurus. Both features are considered distinctive features of the genus. As in other ceratosaurians, ossified wrist bones were absent.
+
+
+As is typical for ceratosaurs, the arms and hands of Limusaurus were considerably reduced, even more so than in Ceratosaurus. Limusaurus had three fingers (the middle three), as compared to the five fingers of more basal relatives; it was unique in that the first finger was missing entirely, and the first metacarpal was shorter than the other metacarpals. The second metacarpal was more robust than the other metacarpals, which is another distinctive feature of the genus. The second finger had three phalanges (finger bones). The third finger also only had three phalanges, as opposed to four in other early theropods. Although the fourth finger is not preserved, the tip of the fourth metacarpal indicates the presence of a joint and therefore the presence of a phalanx; it is likely that this was the only phalanx of the fourth finger. The unguals (claw bones) of the fingers were short, stout, and expanded at their base. They had two grooves on their sides, a feature also found in Masiakasaurus.
+
+
+Among the pelvic bones, the ilium was small and tilted towards the midline of the body, as was the case in Elaphrosaurus. As in other ceratosaurians, the lower end ("boot") of the pubis was large and expanded. Unique to the genus, it pointed backwards in a hook-like shape and had a ridge on each side. The elongated legs of Limusaurus had proportions that were well-adapted to running, with their lower segments much longer than the femur: the tibiotarsus, the fusion of the tibia (shin bone) and tarsal bones, was 1.2 times the length of the femur, and the foot was 1.3 times the length of the femur. The legs were 1.8 times the length of the torso. The upper half of the femur was triangular in cross section, a feature shared with Masiakasaurus. The metatarsals of the three weight-bearing toes were arranged in an arc, with the fourth metatarsal straight and adhering tightly to the third for its entire length; these features are unique to Limusaurus. The hallux (the first toe or dewclaw) was reduced, being only 17% the length of the third metatarsal, another unique feature. As in other ceratosaurians, the unguals of the foot had two grooves on their sides.
+
+
+Classification and evolution
+
+Limusaurus was classified as a basal member of Ceratosauria by Xu and colleagues in 2009 (who also considered the closely related Elaphrosaurus as such). It had several skull features in common with basal theropods such as other ceratosaurs and coelophysoids, but it also shared a number of traits, including the beak and the fused sternum, convergently with the later coelurosaurs. A 2012 study by paleontologists Diego Pol and Oliver Rauhut also found Limusaurus and Elaphrosaurus to be basal ceratosaurians in their phylogenetic analysis, while a 2010 study by paleontologist Martin Ezcurra and colleagues placed them in the more derived group Abelisauroidea within Ceratosauria.
+
+
+A 2016 study by paleontologists Oliver Rauhut and Matthew Carrano found Limusaurus to be more derived, grouping together with Elaphrosaurus within the abelisauroid family Noasauridae. Together with an as-of-yet unnamed taxon represented by specimen CCGÂ 20011, and not included in other analyses, the two taxa formed the clade Elaphrosaurinae; Elaphrosaurus and CCGÂ 20011 were closer to each other than to Limusaurus within this group. Laevisuchus and Deltadromeus were placed basal to the group of Noasaurinae and Elaphrosaurinae within Noasauridae. The only known specimen of Elaphrosaurus is missing its skull and hands among other elements, and its affinities were long unclear (it was often considered an ornithomimosaur from 1928 well into the 1990s) until the more complete Limusaurus was found. The discovery of Limusaurus allowed the extrapolation of the complete length of Elaphrosaurus, 6.0â6.3Â m (19.7â20.7Â ft). Wang and colleagues, in 2017, also found Limusaurus and Elaphrosaurus to group in the clade Elaphrosaurinae, within the family Noasauridae. Variants of their analysis also recovered Spinostropheus as a possible additional elaphrosaurine. The Noasauridae was placed in a position outside Neoceratosauria, the group containing Ceratosaurus and Abelisauridae. The Italian paleontologist Cristiano Dal Sasso and colleagues, in 2018, found Limusaurus to be closely related to Spinostropheus, while Elaphrosaurus occupies a more basal position. A 2019 study by paleontologist Max Langer and colleagues, which was based on the same data set used by the 2016 study, also grouped Limusaurus together with Elaphrosaurus and CCGÂ 20011. Argentinian paleontologist Mattia Baiano and colleagues, in 2020, found Limusaurus to form a clade with Elaphrosaurus as well as with the new genus Huinculsaurus.
+
+
+To test the influence of the extreme anatomical changes with growth in Limusaurus, Wang and colleagues, in their 2017 study, performed separate analyses that were based on only the adult anatomy or on both the adult and juvenile anatomy. In another analysis, each Limusaurus individual was treated as an independent unit. All the juvenile Limusaurus specimens grouped together to the exclusion of adult specimens, showing that their anatomy changed significantly through growth. The inclusion or exclusion of juvenile features had little effect on the placement of Limusaurus in the phylogenetic tree.
+
+
+The cladogram below shows the position of Limusaurus within Noasauridae according to Baiano and colleagues, 2020:
+
+
+Spinostropheus
+
+
+Limusaurus
+
+
+Elaphrosaurus
+
+
+Huinculsaurus
+
+
+Deltadromeus
+
+
+Genusaurus
+
+
+Afromimus
+
+
+Velocisaurus
+
+
+Masiakasaurus
+
+
+Noasaurus
+
+
+Laevisuchus
+
+
+In addition to being the first definite ceratosaur known from Asia to be discovered, Limusaurus is also one of the earliest known members of the group, living during the Oxfordian stage of the Jurassic period (approximately 161-157Â million years ago). According to Xu and colleagues, its discovery shows that the Asian dinosaur fauna was less endemic during the Middle to Late Jurassic period than previously thought, and suggests a possible land connection between Asia and other continents during that period. Biologist Josef Stiegler and colleagues stated in a 2014 conference abstract that Limusaurus is the earliest known toothless theropod, as well as the only non-bird theropod known to have had strong bilateral reduction of its digits (as the outer fingers were reduced in size).
+
+
+Digit homology
+
+The most basal theropods had five digits in the hand. Along the lineage that led to birds the number of digits in the hand decreased; by the emergence of the group Tetanurae, which includes birds, two digits had disappeared from the hand, leaving three. Traditionally, it has been hypothesized that the digits lost were the two outermost digits, i.e. digits IV and V, in a process known as Lateral Digit Reduction (LDR). According to this scenario, the three fingers retained by tetanurans were therefore homologous (evolutionary corresponding to) with digit I, II, and III of basal theropods, which would have implications for the evolution of birds.
+
+
+However, the hypothesis of LDR is in contradiction to some embryological studies on birds which show that, from five developmental sites, the digits that develop are the three middle digits (II, III, IV). This inconsistency has been a matter of debate for almost 200 years, and has been used by paleornithologist Alan Feduccia to support the hypothesis that birds are descended not from theropods but from some other group of archosaurs which had lost the first and fifth digits. The mainstream view of bird origins among paleontologists is that birds are theropod dinosaurs. To explain the discrepancy between morphological and embryological data in the context of bird origins, an alternative scenario to LDR was developed by paleontologists Tony Thulborn and Tim Hamley in 1982. In this scenario, the digits I and V of theropods were reduced in the process of Bilateral Digit Reduction (BDR), with the remaining digits developing to resemble the former digits I-III. Limusaurus was initially considered as evidence for the BDR hypothesis by Xu and colleagues in 2009 due to itâand other ceratosauriansâhaving a reduced first digit, with these researchers hypothesizing that a similar pattern of reduction occurred among the tetanurans (the sister group of the ceratosaurians).
+
+
+Several other hypotheses have been proposed to improve upon and reconcile the LDR and BDR hypotheses. One predominantly favored hypothesis, first developed by evolutionary biologist GÃ¼nter P. Wagner and paleontologist Jacques Gauthier in 1999, involves a "frameshift" of the digits; the first digit fails to grow in the first developmental site due to not receiving the necessary signals, which has the effect of shifting digits I-III to the positions of II-IV. Thus, while digits I-III from the ancestral theropod are retained, they do not grow in the same location. A version of the frameshift hypothesis modified to incorporate both elements of BDR and fossil evidence from Limusaurus and other theropods, the "thumbs down" hypothesis of biologist Daniel Äapek and colleagues from 2014, suggests that this frameshift took place after the reduction of both the first and the fourth digits in the theropod lineage. The main alternative hypothesis, supported by Xu and colleagues, known as the "lateral shift hypothesis", considers a partial, step-wise frameshift in which, from a four-fingered hand with reduced digits I and IV, IÂ fully disappears while IV develops into a fully-fledged finger, with II-IV taking on the morphologies of the former I-III.
+
+
+In a 2009 response to Xu and colleague's description of Limusaurus, biologist Alexander Vargas, Wagner and Gauthier stated in 2009 that it is plausible that ceratosaurians underwent BDR independent of the tetanurans, and therefore have no bearing on the issue of avian digit homology. Xu and colleagues replied in 2011 that they still found a step-wise shift more plausible than a hidden frameshift. As demonstrated by a teratological analysis by biologist Geoffrey Guinard in 2016, the abbreviation (mesomelia) and loss of digits (hypophalangia) in the forelimb of Limusaurus is likely the result of a developmental anomaly that appeared exclusively in and persisted throughout the evolutionary lineage of ceratosaurians, and is unconnected to the pattern of digital reduction and frameshift that occurred in tetanurans. Carrano and paleontologist Jonah Choiniere suggested in 2016 that this is supported by the hands of the ceratosaurians Ceratosaurus, Berberosaurus, and Eoabelisaurus having plesiomorphic (i.e. more similar to the ancestral condition of theropods than to derived abelisaurs) metacarpal bones comparable to those of the more basal theropod Dilophosaurus. Xu and biologist Susan Mackem stated in 2013 that the divergent developmental pathways of ceratosaurians and tetanurans are associated with a difference in forelimb function; tetanurans utilized their hands for grasping prey, while the hands of ceratosaurians almost certainly played no role in predation. An ancestral states analysis (estimation of the original anatomy of a group) by Dal Sasso and colleagues in 2018 also found that the digit reduction seen in Limusaurus occurred independently from that in tetanurans. According to this analysis, an axis shift from digit position IV to III took place at the basis of Tetanurae after the fourth finger was lost.
+
+
+Paleobiology
+
+Growth
+
+Specimens of Limusaurus show 78 different anatomical changes that occurred as the animals grew. In particular, their heads became proportionally shallower, their middle hand bones lengthened, and the "hook" of their pubis grew longer. The shaft of the quadrate bone in the skull also straightened in adults, and the tips of their lower jaws became more downturned.
+
+
+The most obvious change that happened during the growth of Limusaurus was the complete loss of teeth from juveniles to adults. Juveniles began with one tooth in each premaxilla, eight in each maxilla, and at least twelve in each half of the lower jaw (at least 42 teeth in total). At the next stage, the first, sixth, and eighth teeth in each maxilla, as well as the sixth in each half of the lower jaw had all been lost, although the sockets were still present, and there was a small replacement tooth in the socket of the sixth lower tooth (leaving at least 34 teeth in total). During this stage, use of teeth and normal tooth replacement likely ceased or became reduced, since none of the still-erupted teeth bear any wear marks or resorption. As the specimens grew, the transformation became more radical. In subadult and adult specimens older than one year, all the teeth were missing. CT scanning shows that only five empty tooth sockets remained in the adult maxilla; all the sockets in the lower jaw were fused into a single, hollow canal, and the rest of the tooth sockets were obliterated.
+
+
+The loss of teeth with age in Limusaurus is the most extreme case of tooth morphology changing with age recorded among dinosaurs. Limusaurus is one of the few known jawed vertebrates where teeth are completely lost during growth. The other known examples are the red mullet and striped red mullet, several armored catfish, and the platypus. Meanwhile, its complicated pattern of tooth loss, from both the front and the back, is most similar to that of the avialan Jeholornis. The early halt in tooth replacement possibly resulted from the regression of the replacement tooth buds during the first year, as in the veiled chameleon. The replacement of teeth by a beak through the growth of Limusaurus suggests that beaks in other lineages of theropods, and indeed beaked animals in general, may have evolved heterochronically, i.e. with beaks first occurring in adults and then gradually appearing in juveniles as these lineages evolved. This is in accordance with the presence of genetic signal pathways (molecular processes) which control the formation of teeth in birds.
+
+
+Wang and colleagues analyzed growth rings (visible in bone cross-sections and analogous to the growth rings of trees) of the tibiae from the various developmental stages of Limusaurus in 2017, and found that the animal was skeletally mature at six years of age. The bone tissue was primarily composed of fibrolamellar bone (where the internal fibres are disorganized), indicating that Limusaurus grew quickly; by contrast, the noasaurines Masiakasaurus and Vespersaurus had parallel-fibred bone indicative of slower growth, possibly due to the drier and more resource-poor environments that they would have lived in. In older specimens, the outermost growth rings are very close together (forming what is known as the external fundamental system), indicating that rapid growth had ceased in these individuals.
+
+
+Feeding and diet
+
+Anatomical features of Limusaurus such as the small head with toothless jaws and long neck were interpreted as indicating a herbivorous diet by Xu and colleagues in 2009. Paleontologist Lindsay E. Zanno and colleagues found in 2011 that adult specimens of Limusaurus show morphological traits associated with herbivory that are shared with other groups of herbivorous theropods, including the Ornithomimosauria, Therizinosauria, Oviraptorosauria, and Alvarezsauroidea, along with the troodontid Jinfengopteryx. Wang and colleagues pointed out that adult specimens in particular are characterized by the presence of gastroliths (ingested stones retained in the stomach), with older adults having gastroliths that are larger and more numerous than those of younger adults. The size and quantity of these gastroliths are comparable to those of birds in young adults, and those of ornithomimosaurs and oviraptorosaurs in older adults. These groups of theropods all used gastroliths in processing plant matter, suggesting that Limusaurus did the same; the increased number of gastroliths in older adults may be indicative of the gut's ability to process plant matter more finely as they aged. An isotope analysis of the available specimens of Limusaurus likewise showed that adults consistently match the isotope signatures of other herbivorous dinosaurs. In the same analysis, juveniles and subadults were found to vary greatly in their isotopic signatures; this indicates that juveniles were likely omnivorous (feeding on both animals and plants), but switched to strict herbivory as they aged. This is comparable to the diet shift experienced by the aforementioned mullets and armored catfish.
+
+
+Social behavior
+
+The paleontologist David A. Eberth and colleagues suggested in 2010 that the large number of Limusaurus specimens in the Shishugou Formation mud pits indicates they were either abundant among the small vertebrate animals in the area, or that the trapped individuals had been drawn there. They found it unlikely that animals were trapped on any basis other than size, and pointed out that it was difficult to explain why herbivores like Limusaurus would be attracted to sites where other animals were mired, so they considered it most likely that the larger number of Limusaurus fossils was due to their abundance. These authors also suggested that the abundance of Limusaurus inferred for the area and the evidence for successive, rapid burials of each individual made it possible that Limusaurus was gregarious, living in groups. There is some evidence for gregariousness in many small theropods and that there may have been social behaviours related to age, but it remains unknown whether the bone beds containing Limusaurus specimens preserve evidence of sociality and segregation related to age. Paleontologist Rafael Delcourt agreed in 2018 that since both Limusaurus and Masiakasaurus have been found in assemblages of multiple specimens each, this suggests these small ceratosaurs lived in groups.
+
+
+Paleoenvironment
+
+All known Limusaurus fossils were recovered from the Shishugou Formation, a succession of sedimentary rocks that were deposited at the northeastern margin of the Junggar foreland basin and is about 350â400Â m (1,150â1,310Â ft) in thickness. The formation is dated to the Late Jurassic, around 161Â to 157Â million years ago. Limusaurus occurs in the upper part of the formation, which represents a variety of environments, including alluvial fans and alluvial plains, streams, wetlands, and shallow lakes. During the time when Limusaurus lived, the environment would have been relatively warm and dry, judging by the abundance of coal and carbon-rich deposits. The climate was probably highly seasonal due to monsoonal influences, with warm, wet summers and dry winters. The climate enabled the growth of a richly forested environment; the forest would have been dominated by Araucaria trees, with the undergrowth being occupied by Coniopteris, Anglopteris and Osmunda ferns, Equisetites horsetails, and Elatocladus shrubs.
+
+
+The environment of the Shishugou Formation hosted a diverse assemblage of animals. More than 35 species of vertebrates are known from fossils, including at least 14 dinosaur species. Contemporaries of Limusaurus in the Wucaiwan locality include the theropods Haplocheirus, Zuolong, Guanlong, Aorun, and Shishugounykus; the sauropod Mamenchisaurus; the ornithischians Gongbusaurus, Yinlong, and Hualianceratops; the cynodont Yuanotherium; the mammal Acuodulodon; the crocodyliform Nominosuchus and another unnamed crocodyliform found with the holotype specimen of Limusaurus; and the turtles Xinjiangchelys and Annemys. Small theropod dinosaurs are generally rare in the fossil record. According to Eberth and colleagues, the high incidence of Limusaurus indicates that the abundance of small theropods is underestimated elsewhere as these animals are generally less likely to fossilize.
+
+
+Taphonomy
+
+The known fossil material of Limusaurus consists of large assemblages of individuals mired in mud pits, which were also referred to as "dinosaur death pits" in the 2010 article by Eberth and colleagues that examined the taphonomy of the specimens within them (changes that happened during their decay and fossilization), as well as in media reporting. Two of the mud pits containing Limusaurus specimens were found at the same stratigraphic level, while a third was some 6.5Â m (21Â ft) higher in the stratigraphic column. The mud pits are around  2Â m (6Â ft 7Â in) wide and range in depth from 1 to 2Â m (3Â ft 3Â in to 6Â ft 7Â in). The mud pits occur within distinctive rock layers that can be followed for hundreds of meters to kilometers. These layers, though not the pits themselves, comprise pale-colored laminated successions of mudstone 0.5 to 2Â m (1Â ft 8Â in to 6Â ft 7Â in) in thickness. The mudstones probably accumulated either in standing water or a water-saturated substrate; root traces at the top of the layers indicate a marsh-like environment. One of the layers is topped by a crust-like mudstone layer that indicates soil formation and exposure to air. Volcanic minerals found within the mudstone layers indicate volcanic events during deposition. The mud pits themselves show a tan-colored, silty to sandy claystone with abundant plant fragments and root traces. At their margins, the laminae of the surrounding mudstone are deformed or truncated, suggesting that the mudstone was partly fluid, plastic, and brittle at the time when the skeletons were deposited. Fragments of the crust topping one of the mudstone layers were found within the pits, indicating that the crust collapsed downwards into the pits.
+
+
+The deformation structures and the consistent size of the pits suggest that they represent the footprints of giant sauropods such as Mamenchisaurus sinocanadorum, which was likewise found in the Shishugou Formation and would have had a mass of over 20Â t (22 short tons) and a limb length of over 3Â m (9.8Â ft). Other possible explanations, including sand volcanoes or sinkholes, can be ruled out because characteristic sedimentological features are lacking. The possibility that the encased dinosaurs could have created the pits themselves can likewise be ruled out given their small size; the largest dinosaur found in the pits, Guanlong, would have been merely 66Â cm (26Â in) tall. When creating the pits, the footsteps of the sauropods could have led to soil liquefaction, resulting in smaller animals such as Limusaurus becoming stuck. In contrast to other incidences of miring in dinosaurs, where much larger individuals likely became stuck in a highly viscous sediment and got preserved in their original death positions, the mud pits containing Limusaurus were of a more liquid mud in which the carcasses floated before settling at the bottom. The size of these assemblages can be attributed to the tendency of smaller animals to become trapped in mud.
+
+
+Limusaurus is the most abundant dinosaur found in the mud pits. One of the three pits, TBB2001, contained five Limusaurus individuals while other species are absent. TBB2002, on the other hand, contained five theropod dinosaur skeletons including two Limusaurus, two Guanlong and one individual of a not yet described species. The third pit, TBB2005, contained twelve Limusaurus individuals, including the holotype, but also the tail of a small ornithischian dinosaur as well as two crocodyliforms, two mammals, a turtle and three tritylodontid cynodonts. The completeness of the skeletons is variable; at least half of the theropod skeletons are complete, with missing parts due to recent erosion. Rear parts of the skeletons tend to be more common than front parts. Most individuals were embedded laying on their sides, though some lie on their backs or undersides. In pits TBB2001 and TBB2002 the skeletons lie one above the other. Bones pertaining to the same individual often lie upon each other in direct contact, while there is no direct contact between bones of separate individuals. This indicates that sediment settled within the mud pits between the burial events. These observations led Eberth and colleagues to conclude that the skeletons must have accumulated within the mud pits over an extended time span rather than during a short-term death event.
+
+
+The completeness and articulation (connectedness) of the skeletons suggest rapid burial, though the presence of isolated body parts also suggests that some carcasses were exposed to the air for days or months. Evidence for scavenging, such as isolated bones, tooth marks on bones, or shed teeth of theropods, is lacking. However, it is possible that scavengers carried whole body parts away, as feeding at the pits might not have been possible. Eberth and colleagues speculated that the two Guanlong specimens preserved at the top of pit TBB2002 could have been scavenging on the mired carcasses before getting mired themselves. The horizontal orientation of the skeletons within the pits suggests that the mud was soft. The neck and tail of one specimen are bent upwards, suggesting that the carcass was pushed down towards the bottom of the pit by trampling of another animal that became trapped at a later time. Specimens typically show flexed hind limbs, indicating that the individuals died in a resting pose within the pits. The typical death poses seen in many other dinosaur skeletons, where the head and tail are drawn above the body, are absent. Eberth and colleagues found it likely that the burial of all individuals occurred in less than a year, based on the seasonality of the local climate and the similarity of the sediments of the three pits.
+
+
+See also
+
+References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

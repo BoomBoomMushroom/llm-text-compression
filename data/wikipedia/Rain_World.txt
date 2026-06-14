@@ -1,0 +1,141 @@
+
+
+
+Rain World is a 2017 survival-platform video game developed by independent studio Videocult and published by Adult Swim Games and Akupara Games. It was released for PlayStation 4 and Windows in March 2017 and Nintendo Switch in December 2018. The player guides a "slugcat", an agile animal resembling a cat-slug hybrid, as it fights for survival in a derelict and hostile environment. The slugcat traverses the remnants of an industrialized ancient civilization in search of its lost family. It uses debris as weapons to ward off lethal predators, scavenges for food, and attempts to reach safe hibernation rooms before deadly torrential rain arrives. Rain World can be played alone or with multiple players; there is also a sandbox mode.
+
+
+Development began in 2011 and included a successful Kickstarter campaign in 2014. The two-man team intended to simulate a unique, realistic ecosystem, in which creatures act independently from the player and perpetually roam the environment. Rain World uses real-time procedural animation and conveys much of its narrative through environmental storytelling, adopting an adaptive low-fi and electronic soundtrack. The player is given little explicit guidance so that they would feel like a rat that lives on subway tracks, learning to survive in an environment without comprehending its higher-level function.
+
+
+Rain World received mixed reviews from critics, who praised its art design and fluid animation but criticized its difficulty, checkpoint system, and controls; some of these concerns were addressed with later updates. The game was nominated for awards and garnered a cult following and a large modding community. A downloadable content pack titled Downpour, adapted from a popular community mod, was released for Windows in January 2023 and ported to consoles in July 2023. It added five slugcat characters with unique abilities and was positively received by critics. A second content pack, The Watcher, was released for Windows in March 2025 and ported to consoles in September.
+
+
+Gameplay
+
+Rain World is a two-dimensional (2D) survival-platform video game taking place in a post-apocalyptic, industrial environment. The game follows the player-controlled "slugcat", an animal akin to a cat and a slug. The slugcat freely explores screens shown individually by squeezing through pipes or walking; some screens spawn creatures that wander the region, which the slugcat may defend against with spears and debris. It must jump, swim, and climb poles to avoid enemies while foraging for food which must be consumed to hibernate in scarce, designated safe rooms. Hibernation spots serve as checkpoints where it returns to after death; if the slugcat does not reach a shelter before the end of the cycle, rain will kill it in an ensuing flood.
+
+
+Upon death, the slugcat loses one "karma" level, which is gained upon hibernating. The slugcat can prevent losing karma by eating a yellow "karma flower". The flower appears in set locations and is replanted wherever the slugcat dies after eating it. It must meet a specific karma level to pass through gates set at the borders of the game's 12 regions. Rain World offers little to guide the player apart from holograms by a worm-like creature that monitors the slugcat. The holograms point towards food and story-related events, though this assistance becomes rarer over time. The player may view an in-game map to review their exploration progress.
+
+
+Predators range from camouflaged carnivorous plants to large gas-producing vultures and colored Komodo dragon-like lizards; some creatures are friendly but easily provoked, like the "scavengers", which are agile like the slugcat and equipped with explosive spears. Many enemies can kill the slugcat in one attack. Some have variations that possess unique characteristics. All creatures possess dynamic behavior and perpetually wander independently from the slugcat, occasionally battling and hunting each other; without a set path for predators to traverse, the slugcat's exploration is unpredictably hindered. The slugcat may carry two items with its hands. It uses its right hand first when throwing and may swap the items' places. Some foods grant status effects when consumed, like slowing down time.
+
+
+Along with the default slugcat, the player may choose to play as the Monk and Hunter slugcats. As the Monk, creatures are less aggressive and the slugcat needs less food to hibernate. The Hunter, a carnivore with a bigger appetite, must fight and feed on larger creatures while also being capable of carrying extra spears. Other game modes include a multiplayer arena mode, where up to four players battle each other, and a sandbox mode, where the player freely spawns and interacts with objects and creatures.
+
+
+Downloadable content
+
+Rain World has two downloadable content packs (DLCs), the first being Downpour. Downpour triples the game's world size and adds five slugcats and ten regions, accessed separately from the original game's content. Each slugcat features a different set of abilities. The Artificer can jump twice midair and create explosives. The Spearmaster produces an infinite amount of spears, but piercing other creatures is the only way it receives food. The Rivulet, a semiaquatic slugcat, has increased agility, but must deal with more frequent rain. The Gourmand can craft usable gear by merging items, though it requires a tremendous amount of food to stay alive. The Saint has a tongue that can grapple onto objects, granting it high mobility, but cannot throw spears and is prone to freezing to death.
+
+
+Downpour also adds three game modes: Safari mode allows the player to spectate the ecosystem and control any living creature. Challenge mode provides 70 scored challenges with preset objectives. Expedition provides random missions that award experience points upon completion, which the player uses to purchase upgrades and activate difficulty modifiers. Downpour's release was accompanied by full local cooperative multiplayer functionality and modding support so that players could add user-generated content.
+
+
+The second DLC is The Watcher, which adds regions, creatures, and the Watcher slugcat.
+
+
+Plot
+
+The narrative is conveyed through the environment, dreams during hibernation, and the worm-creature's holograms. The game begins when a family of slugcats is struck by the rain. They are separated from two of their childrenâincluding the player's slugcat, which is flushed into the long-abandoned remnants of an industrialized ancient civilization.
+
+
+Eventually, the slugcat stumbles upon Five Pebbles, a massive, infected, superintelligent, and semi-biotic artificial intelligence called an "iterator". After climbing above the clouds and traversing through his megastructure, the slugcat meets his avatar. Pebbles explains that, like all living things, the slugcat is trapped in a cycle of death and rebirth. The ancient species who built him and the surrounding structures have disappeared, and they constructed the iterators as beings tasked to find a way to end the cycle. He infers that the slugcat wants it to end, and directs it to where it can free itself. Following his guidance, the slugcat travels underground and enters the ethereal "Void Sea", a body of "Void Fluid", where it can "ascend".
+
+
+More information about the world is obtained by bringing pearls to a damaged iterator named Looks to the Moon, whose structure collapsed and partially submerged into the shoreline. The pearls document various religious, cultural, and historical details about the ancient civilization and the aftermath of their disappearance.
+
+
+The Hunter's story acts as a prequel; it begins with a pearl, a green "neuron fly", and a 20-cycle limit before the Hunter can permanently die of sickness. The slugcat travels to find a comatose Looks to the Moon and revives her with the neuron fly. When read by Moon, the pearl reveals the Hunter was sent by an iterator named No Significant Harassment.
+
+
+Downpour
+
+Downpour's individual narratives, though presented nonlinearly in-game, are shown below chronologically.
+
+
+Development
+
+Rain World was developed by Videocult, an indie group made up of Joar Jakobsson and James Therrien (also known as James Primate). Jakobsson served as the artist, designer, and programmer, while Primate wrote the soundtrack, handled the studio's business, and designed levels; this became Primate's first experience developing gameplay. Before creating Rain World, Jakobsson was a graphic designer in Sweden and novice video game developer who taught himself to animate sprites. He had little industry experience when development began in 2011.
+
+
+A friend encouraged Jakobsson to pursue the concept of procedural animation, a method that generates real-time, unique animations. He then designed an animal and posted development updates on his YouTube channel, with one commenter dubbing the creature a "slugcat".:â1:20â Jakobsson was interested in abandoned environments and what they reveal about the people who occupied them. Inspired by feelings of foreignness while living as an exchange student in Seoul, South Korea, a core idea was to recreate the life of "the rat in Manhattan". This rat understands how to find food, hide, and survive in a subway, but does not comprehend the subway's structural purpose or why it was built. In 2012, Primate found Rain World on an Internet forum for indie games. Intrigued by the art style, he successfully pitched 12 tracks to Jakobsson after experiencing a nightmare where the game "was filled with garbage music".
+
+
+I wasn't prepared for any of it! I have never made a video game before and I was a graphic design student and I was winging it the entire time!
+
+
+Rain World was conceived as a single-room multiplayer platform video game where the player would hunt one species of prey as they run from one bigger species of predators.:â5:05â The game strayed from that vision as it was expanded, but had always retained the concept of the slugcat and the "grimy, wet industrial environment". Jakobsson and Primate hoped the player would feel as if they were close to making sense of the game's abstraction of an industrial environment without fully understanding it. Jakobsson did not intend for the game's extreme difficulty, which he described as defining the game's identity.:â12:00â
+
+
+Jakobsson favored a pragmatic approach to creating art in game design, treating programming as a means to an end.:â11:52â Rain World's enemies were designed to be unpredictableâliving their own lives in which they hunt and struggle to survive rather than serving as obstacles for the player.:â2:44â Enemies perpetually and dynamically wander without a set path, and in playtests a week before release, the developers noticed how some players became more or less interested in the game based on how lucky they were with enemy behavior.  Primate explained he disliked conventional enemy behavior where they acted merely as adversaries, preferring the predators to act like hungry animals in a realistic ecosystem like the slugcat, eliciting empathy in the player. In a PlayStation Blog post, Jakobsson added that the creatures in the ecosystem can recognize the player's actions. He took this concept into account when developing the scavengers in particular; they are initially distrustful of the slugcat, but eventually ally with it if the slugcat assists with combat or provides pearls. Placed in the middle of the food chain, the slugcat is intended to avoid combat while evading enemies through stealth and flight. To differentiate Rain World from Metroidvania video games, the team emphasized the powerlessness of the slugcat in gameplay, foregoing traditional progression wherein the player would become powerful over time.:â8:52â Except for the worm creature and small tutorial, the player is completely unguided and forced to progress through experimentation.
+
+
+Primate described procedural animation as a necessary factor to Rain World's natural and "believable" ecosystem. It allowed the game's artificial intelligence to create unintentional behaviors like creatures appearing "frustrated" when failing to hunt the slugcat, personifying them.:â6:36â The game was written in the Lingo programming language:â2:00â before switching to C# early on with its own independent game engine. Jakobsson's levels are made by hand in a standalone level editor. The editor brushes recurring, cloned elements, like plants and chains, onto the map, as well as combining and processing shadows. At one point, the original release of Rain World was planned to include a multiplayer mode with separate story and custom modes upon release. The development team crowdfunded some development costs via Kickstarter in early 2014 and quickly surpassed its goal, being greenlit and picked up by Adult Swim Games.:â2:14â By early 2015, the team had switched to the Unity game engine and released a test version to its Kickstarter backers.
+
+
+Music and sound design
+
+Though Rain World's soundtrack was intended to be chiptune, Primate felt that "arcade bleeps and bloops and retro concepts" did not fit the naturalistic mood of the game and instead aimed for a more "moody, immersive atmosphere". The final product was a low-fi and electronic soundtrack. He and his musician partner Lydia Esrig turned to field recordings of urban ambiance for both the soundtrack and sound effects, along with litter and metal for otherworldly sounds. Primate aimed for the music to approximate the game's eclectic visuals, which mix industrial, science fiction, jungle, and architectural elements.
+
+
+With little dialogue or narration, Rain World's story was partly communicated through its soundtrack. The game's beginning uses primitive drums based on the slugcat's feelings of fear and hunger before transitioning to describe new areas. Rain World has 3.5 hours of recorded music across 160 tracks. When the slugcat is chased by a predator, between eight and twelve tracks will layer simultaneously to create ambiance and respond to the slugcat's in-game context, which Primate names "threat music". While the creatures of Rain World are animals like the slugcat, the torrential rain was designed to represent "oblivion incarnate", a threat no creature could survive. To contribute to this, a collection of sampled rainstorms with varying intensity layer up as the rain develops. The storm's climax introduces pipe organs that give a "biblical wrath-of-god vibe".
+
+
+Release
+
+Videocult announced the last phases of development in early 2016. Rain World's animation was popularized on social media pre-release and praised by IGN for its "uncannily fluid character animations". Primate partially attributed this virality to GIFs, noting a Twitter post retweeted over 15,000 times. A final trailer was posted on March 8, 2017, revealing its release date; Adult Swim Games published Rain World on March 28 for PlayStation 4 and Windows.
+
+
+In April 2017, the game received an update to marginally alleviate its difficulty. A major content update was planned for release later that year, which would add the local multiplayer arena mode, featuring over 50 rooms, and the Monk and Hunter. The update was released in beta in November for Windows and published officially on December 11, 2017; it was also ported to PlayStation 4 on December 21, 2018. After gauging player interest in January 2018, Videocult ported Rain World to the Nintendo Switch on December 13 in the United States and December 27 in Europe. Limited Run Games released a physical edition for PlayStation 4 later that month. In August 2025, the game was released to the Xbox Game Pass. In January 2022, due to conflicts with Adult Swim Games, Videocult announced that Rain World would be published by Akupara Games from then on after a prolonged legal dispute.
+
+
+The first DLC pack, titled Downpour, added five playable slugcats with individual storylines, over 1000 rooms across ten regions, and three game modes. It is an expansion of the "More Slugcats" mod and was developed by nearly 40 community modders over the course of five years. It was released for Windows on January 19, 2023, and for PlayStation 5, Xbox One, and Xbox Series X and Series S on July 11, 2023. Downpour's development started before the Monk and Hunter update was released. A major theme of the DLC was the passage of time and how the hostile world transforms as catastrophic events occur, placing the five slugcats' environments across different periods of time. Lead programmer Andrew Marrero intended for the Challenge mode to teach the player the game's mechanics. By offering structured tasks, the mode provides a more controlled environment for practice compared to the "spontaneous challenges" of the main gameplay. Lee Moriya, the creator of the Expedition game mode, said that the given quests encouraged the player to do things they would not have done normally. Marrero created Safari mode to allow the player to observe the simulated ecosystem without the stress of surviving or being pursued.
+
+
+The second DLC, titled The Watcher, added new regions, creatures, and the Watcher slugcat, also called the Nightcat. The DLC was developed by Videocult and modders that worked on Downpour; its marketing adopted alternate reality game puzzle elements for fans to decipher. The DLC was released for Windows on March 28, 2025, with content adapted from community mods. A content update was released on September 25, alongside ports for the Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S.
+
+
+Reception
+
+The game received mixed reviews upon release, according to review aggregator website Metacritic, with 43% of critics recommending it according to OpenCritic. Video game journalists praised the game's art design, but characterized its gameplay as harsh, calling its deaths unavoidable, controls sloppy, and hibernation requirements time-consuming.
+
+
+However, Rain World's active fanbase earned the game cult status and a large modding community. Downpour was received positively by critics, andâas a DLC made of community-created contentâsignificantly contributed to Rain World's status as a cult hit according to journalist Simon Carless; Downpour sold 182,000 units on the video game distribution service Steam in the months surrounding its release and 280,000 units from March 2022 to February 2023.
+
+
+Gameplay
+
+Rain World's gameplay frustrated reviewers, who often descended into apathy. Noting what was described as sudden deaths, infrequent checkpoints, frequent repetition, punitive rain, inexplicable enemy movements, and clumsy controls, IGN wrote that these elements taken alone would be "tough but fair", but when considered together, "the odds are stacked so high against the player that it risks toppling the entire structure of the game". Though Game Informer recognized the game's intent to simulate the slugcat's suffering in a punishing, mysterious environment, they argued the controls, lack of assistance, and unpredictable enemy movements ruined the result. Reviewers disliked the repeated navigation of rooms with randomized enemies after each death, which tempered their urge to explore. Polygon's reviewer was "miserable" following the loss of her multi-hour progression. She wrote about futility as a central tenet of Rain World and felt that she was not given the proper tools to survive. To many critics, the slugcat's movements were frustratingly clumsy, and they argued that the imprecise throwing mechanics often caused unwarranted deaths. Rock, Paper, Shotgun compared hypothetical instructions for those throwing mechanics to a "bizarre legal document".
+
+
+Reviewers concluded that while some hardcore players might enjoy its gameplay, Rain World excluded a large audience with its design choices. Paste compared the controls to Devil May Cry due to their required specificity, believing that they would have frustrated even the most experienced of gamers. Rock, Paper, Shotgun called the checkpointing among the worst in modern platform games, and its challenge, unlike the similarly punishing Dark Souls, without purpose. Rain World's karma gates, requiring a positive hibernate-to-death ratio, were arbitrary goals "disrespectful" of the player's time, according to GameSpot. Making the player trudge through an area a dozen times, IGN argued, is "antithetical" in a game in which exploration is the reward. In contrast, PC Gamer's reviewer, with time, saw the controls less as "bad design" than as "thematically appropriate" given the game's intent to disempower the player. The "thrilling desperation" of Rain World made it one of the best games of 2017 to PCGamesN's reviewer: after hours and hundreds of deaths, he found that learning from each death was worthwhile. While calling Rain World a "beautiful, forward-thinking game", Paste concluded it should have been more accessible in regard to the game's "puzzles" that gave only "half of the pieces".
+
+
+Some critics fondly recalled unique in-game encounters as they learned the game environment's unwritten rules. Unsure of how these strange figures would react, Rock, Paper, Shotgun treated new encounters as puzzles, leading to moments of genuine discovery. Rain World was abundant with opportunities for the player to demonstrate ingenuity, as noted by GameSpot, whose highlights included turning a mouse into a dark room's lantern, using weapons as climbable objects, and luring enemies into battle to distract from the slugcat. This factor was lacking in many games according to PCGamesN, which stated that learning to "manipulate and criss-cross the behaviours of Rain World's menagerie" resulted in exhilaration. Nintendo World Report, reviewing in 2019, believed the unpredictable creature behavior deserved its "own level of praise", which differentiated it from the static, unchanging enemies of other games. Likewise, Shacknews's 2018 review praised the game's pacing, saying that intense action from stumbling upon random beasts were sparse in between Rain World's quiet gameplayâthe reviewer admired Rain World's immersion and the dynamic of the slugcat in a setting that does not revolve around it.
+
+
+Design
+
+During development, Rain World's animation became popular on social media for its fluidity, which reviewers continued to praise at release. IGN described the slugcat's animations as beautiful and reactive to the angle and physics of movement. The reviewer said it was among the best aesthetics in a 2D game, with each screen showing abundant detail and meticulous craft. Its atmosphere was considered sinister and elegant to Eurogamer, who described the "floppy grace" of the slugcat and predators as pleasing. Kotaku had much anticipation for the game's graphicsâespecially with the "pixellated cuteness that is the slugcat"âdespite falling into frustration with its gameplay. Nintendo Life's 2024 review found the game's visuals beautiful enough to exceed its repetitive gameplay; they praised the opening cinematic's music and wordless storytelling, saying how it could function as its own short film. Though Nintendo World Report "fell in love" with Rain World's gloomy and melancholic art style, the graphics were more interesting than beautiful to Polygon, who praised the limited color palette's role in distinguishing the slugcat, prey, and enemies from the environment.
+
+
+Rock, Paper, Shotgun felt that, while some may compare the aesthetic to that of Limbo (2010), Rain World had more in common with Oddworld: Abe's Oddysee's (1997): they described both as featuring dark yet attractive worlds, scary yet fascinating characters, frequent inter-enemy conflict, and frustrating controls. Rain World successfully depicted "the cruel indifference of nature", as described by GameSpot. The reviewer noted how the "imaginative" and "striking" worldâwith surreal inhabitants from a bleak, alien atmosphereârecalled the spirit of games like BioShock (2007) and AbzÃ» (2016), in which they were too "preoccupied admiring the artistry" to contemplate the credulity of the artificial environment. Paste and Eurogamer drew connections to Tokyo Jungle (2012), which featured parallel themes of a savage ecosystem in a post-human environment. PCGamesN also complimented the game's narrative, describing how its simple survival premise turned into "a sci-fi epic that has you meditate on both the futility and beauty of life". Wandering Rain World's landscape brought frequent feelings of loneliness to Shacknews's reviewer, who appreciated the soundtrack as soothing. In retrospective assessments, Eurogamer found surprise the game did not garner the same cultural significance as Hollow Knight (2017); what they saw as the player's unique insignificance in the post-apocalyptic ecosystem was praised especially. In a review of Downpour, PC Gamer summarized Rain World as a "daunting game, but a mesmerizing one to inhabit".
+
+
+Downpour
+
+Downpour was well received by Rock, Paper, Shotgun and PC Gamer. PC Gamer explained how the DLC's accessibility made the game "finally click". Its content was a "monstrously huge package" and a "new beginning" for Rain World in prediction of future community mods. Rock, Paper, Shotgun said the gameplay experience was less confusing than the original game due to the build-up of guides, as well as enjoying the new game modes, which allowed new ways of approaching the game. Comparing the expansion to Stray (2022), they enjoyed the immersion of the new slugcats and their struggles to survive but still considered its difficulty unfair. The reviewer recognized that the unexplained gameplay was one of Rain World's core elements and concluded that Downpour reintroduced Rain World as "one of gaming's most fearsome and unpredictable beasts".
+
+
+Accolades
+
+Rain World was nominated for "Best Platformer" in PC Gamer's 2017 Game of the Year Awards and "Best Platformer", "Best Art Direction", and "Most Innovative" in IGN's Best of 2017 Awards. It was also nominated for the Statue of Liberty Award for Best World at the 2018 New York Game Awards and for "Excellence in Audio" at the Independent Games Festival Competition Awards with an honorable mention for the Seumas McNally Grand Prize.
+
+
+Notes
+
+References
+
+External links
+

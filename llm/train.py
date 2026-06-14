@@ -1,4 +1,5 @@
 import re
+import os
 
 vocabulary = [
     "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", " ",
@@ -14,16 +15,24 @@ def cleanAndFilterText(text: str) -> str:
 
 # Load and clean up our data
 trainingData = []
+"""
 with open("./data/alice_in_wonderland.txt", "r") as f:
     textContents = cleanAndFilterText( f.read() )
     trainingData.append(textContents)
+"""
+
+for (dirpath, dirnames, filenames) in os.walk("./data/wikipedia"):
+    for file in filenames:
+        with open(f"./data/wikipedia/{file}", "r") as f:
+            textContents = cleanAndFilterText( f.read() )
+            trainingData.append(textContents)
+
 
 #print(filteredContents)
 
 import tensorflow as tf
 print("") # separate all the tf startup messages from mine
 import numpy as np
-import os
 import time
 
 chars = tf.strings.unicode_split(" ".join(trainingData), input_encoding="UTF-8")

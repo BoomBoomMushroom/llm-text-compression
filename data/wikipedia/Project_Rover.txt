@@ -1,0 +1,296 @@
+
+
+
+Project Rover was a United States project to develop a nuclear-thermal rocket that ran from 1955 to 1973 at the Los Alamos Scientific Laboratory (LASL). It began as a United States Air Force project to develop a nuclear-powered upper stage for an intercontinental ballistic missile (ICBM). The project was transferred to NASA in 1958 after the Sputnik crisis triggered the Space Race. It was managed by the Space Nuclear Propulsion Office (SNPO), a joint agency of the Atomic Energy Commission (AEC), and NASA. Project Rover became part of NASA's Nuclear Engine for Rocket Vehicle Application (NERVA) project and henceforth dealt with the research into nuclear rocket reactor design, while NERVA involved the overall development and deployment of nuclear rocket engines, and the planning for space missions.
+
+
+Nuclear reactors for Project Rover were built at LASL Technical Area 18 (TA-18), also known as the Pajarito Canyon Site. They were tested there at very low power and then shipped to Area 25 (known as Jackass Flats) at the AEC's Nevada Test Site. Testing of fuel elements and other materials science was done by the LASL N-Division at TA-46 using various ovens and later a custom test reactor, the Nuclear Furnace. Project Rover resulted in the development of three reactor types: Kiwi (1955 to 1964), Phoebus (1964 to 1969), and Pewee (1969 to 1972). Kiwi and Phoebus were large reactors, while Pewee was much smaller, conforming to the smaller budget available after 1968.
+
+
+The reactors were fueled by highly enriched uranium, with liquid hydrogen used as both a rocket propellant and reactor coolant. Nuclear graphite and beryllium were used as neutron moderators and neutron reflectors. The engines were controlled by drums with graphite or beryllium on one side and boron (a nuclear poison) on the other, and the energy level adjusted by rotating the drums. Because hydrogen also acts as a moderator, increasing the flow of propellant also increased reactor power without the need to adjust the drums. Project Rover tests demonstrated that nuclear rocket engines could be shut down and restarted many times without difficulty, and could be clustered if more thrust was desired. Their specific impulse (efficiency) was roughly double that of chemical rockets.
+
+
+The nuclear rocket enjoyed strong political support from the influential chairman of the United States Congress Joint Committee on Atomic Energy, Senator Clinton P. Anderson from New Mexico (where LASL was located), and his allies, Senators Howard Cannon from Nevada and Margaret Chase Smith from Maine. This enabled it to survive multiple cancellation attempts that became ever more serious in the cost cutting that prevailed as the Vietnam War escalated and after the space race ended with the Apollo 11 Moon landing. Projects Rover and NERVA were canceled over their objection in January 1973, and none of the reactors ever flew.
+
+
+Beginnings
+
+Early concepts
+
+During World War II, some scientists at the Manhattan Project's Los Alamos Laboratory, including Stan Ulam, Frederick Reines and Frederic de Hoffmann, speculated about the development of nuclear-powered rockets, and in 1947, Ulam and Cornelius Joseph "C. J." Everett wrote a paper in which they considered using atomic bombs as a means of rocket propulsion. This became the basis for Project Orion. In December 1945, Theodore von Karman and Hsue-Shen Tsien wrote a report for the United States Army Air Forces. While they agreed that it was not yet practical, Tsien speculated that nuclear-powered rockets might one day be powerful enough to launch satellites into orbit.
+
+
+In 1947, North American Aviation's Aerophysics Laboratory published a large paper surveying many of the problems involved in using nuclear reactors to power airplanes and rockets. The study was specifically aimed at an aircraft with a range of 16,000 kilometers (10,000Â mi) and a payload of 3,600 kilograms (8,000Â lb), and covered turbopumps, structure, tankage, aerodynamics and nuclear reactor design. They concluded that hydrogen was best as a propellant and that graphite would be the best neutron moderator, but assumed an operating temperature of 3,150Â Â°C (5,700Â Â°F), which was beyond the capabilities of available materials. The conclusion was that nuclear-powered rockets were not yet practical.
+
+
+The public revelation of atomic energy at the end of the war generated a great deal of speculation, and in the United Kingdom, Val Cleaver, the chief engineer of the rocket division at De Havilland, and Leslie Shepard, a nuclear physicist at the University of Cambridge, independently considered the problem of nuclear rocket propulsion. They became collaborators, and in a series of papers published in the Journal of the British Interplanetary Society in 1948 and 1949, they outlined the design of a nuclear-powered rocket with a solid-core graphite heat exchanger. They reluctantly concluded that nuclear rockets were essential for deep space exploration, but not yet technically feasible.
+
+
+Bussard report
+
+In 1953, Robert W. Bussard, a physicist working on the Nuclear Energy for the Propulsion of Aircraft (NEPA) project at the Oak Ridge National Laboratory, wrote a detailed study. He had read Cleaver and Shepard's work, that of Tsien, and a February 1952 report by engineers at Consolidated Vultee. He used data and analyses from existing chemical rockets, along with specifications for existing components. His calculations were based on the state of the art of nuclear reactors. Most importantly, the paper surveyed several ranges and payload sizes; Consolidated's pessimistic conclusions had partly been the result of considering only a narrow range of possibilities.
+
+
+The result, Nuclear Energy for Rocket Propulsion, stated that the use of nuclear propulsion in rockets is not limited by considerations of combustion energy and thus low molecular weight propellants such as pure hydrogen may be used. While a conventional engine could produce an exhaust velocity of 2,500 meters per second (8,300Â ft/s), a hydrogen-fueled nuclear engine could attain an exhaust velocity of 6,900 meters per second (22,700Â ft/s) under the same conditions. He proposed a graphite-moderated reactor due to graphite's ability to withstand high temperatures and concluded that the fuel elements would require protective cladding to withstand corrosion by the hydrogen propellant.
+
+
+Bussard's study had little impact at first, mainly because only 29 copies were printed, and it was classified as Restricted Data and therefore could only be read by someone with the required security clearance. In December 1953, it was published in Oak Ridge's Journal of Reactor Science and Technology. While still classified, this gave it a wider circulation. Darol Froman, the Deputy Director of the Los Alamos Scientific Laboratory (LASL), and Herbert York, the director of the University of California Radiation Laboratory at Livermore, were interested, and established committees to investigate nuclear rocket propulsion. Froman brought Bussard out to Los Alamos to assist for one week per month.
+
+
+Approval
+
+Robert Bussard's study also attracted the attention of John von Neumann, and he formed an ad hoc committee on Nuclear Propulsion of Missiles. Mark Mills, the assistant director at Livermore was its chairman, and its other members were Norris Bradbury from LASL; Edward Teller and Herbert York from Livermore; Abe Silverstein, the associate director of the National Advisory Committee for Aeronautics (NACA) Lewis Flight Propulsion Laboratory; and Allen F. Donovan from Ramo-Wooldridge.
+
+
+After hearing input on various designs, the Mills committee recommended that development proceed, with the aim of producing a nuclear upper stage for an intercontinental ballistic missile (ICBM). York created a new division at Livermore, and Bradbury created a new one called N Division at Los Alamos under the leadership of Raemer Schreiber, to pursue it. In March 1956, the Armed Forces Special Weapons Project (AFSWP) recommended allocating $100Â million ($1184Â million in 2025) to the nuclear rocket engine project over three years for the two laboratories to conduct feasibility studies and construction of test facilities.
+
+
+Eger V. Murphree and Herbert Loper at the Atomic Energy Commission (AEC) were more cautious. The Atlas missile program was proceeding well, and if successful would have sufficient range to hit targets in most of the Soviet Union. At the same time, nuclear warheads were becoming smaller, lighter and more powerful. The case for a new technology that promised heavier payloads over longer distances seemed weak. However, the nuclear rocket had acquired a powerful political patron in Senator Clinton P. Anderson from New Mexico (where LASL was located), the deputy chairman of the United States Congress Joint Committee on Atomic Energy (JCAE), who was close to von Neumann, Bradbury and Ulam. He managed to secure funding.
+
+
+All work on the nuclear rocket was consolidated at Los Alamos, where it was given the codename Project Rover; Livermore was assigned responsibility for development of the nuclear ramjet, which was codenamed Project Pluto. Project Rover was directed by an active duty USAF officer on secondment to the AEC, Lieutenant Colonel Harold R. Schmidt. He was answerable to another seconded USAF officer, Colonel Jack L. Armstrong, who was also in charge of Pluto and the Systems for Nuclear Auxiliary Power (SNAP) projects.
+
+
+Design concepts
+
+In principle, the design of a nuclear thermal rocket engine is quite simple: a turbopump would force hydrogen through a nuclear reactor, where it would be heated by the reactor to very high temperatures and then exhausted through a rocket nozzle to produce thrust. Complicating factors were immediately apparent. The first was that a means had to be found of controlling reactor temperature and power output. The second was that a means had to be devised to hold the propellant. The only practical way to store hydrogen was in liquid form, and this required a temperature below 20Â K (â253.2Â Â°C). The third was that the hydrogen would be heated to a temperature of around 2,500Â K (2,230Â Â°C), and materials would be required that could withstand such temperatures and resist corrosion by hydrogen.
+
+
+Liquid hydrogen was theoretically the best possible propellant, but in the early 1950s it was expensive, and available only in small quantities. In 1952, the AEC and the National Bureau of Standards had opened a plant near Boulder, Colorado, to produce liquid hydrogen for the thermonuclear weapons program. Before settling on liquid hydrogen, LASL considered other propellants such as methane (CH4) and ammonia (NH3). Ammonia, used in the tests conducted from 1955 to 1957, was inexpensive, easy to obtain, liquid at 239Â K (â34Â Â°C), and easy to pump and handle. It was, however, much heavier than liquid hydrogen, reducing the engine's impulse; it was also found to be even more corrosive, and had undesirable neutronic properties.
+
+
+For the fuel, they considered plutonium-239, uranium-235 and uranium-233. Plutonium was rejected because while it forms compounds easily, they could not reach temperatures as high as those of uranium. Uranium-233 was seriously considered, as compared to uranium-235 it is slightly lighter, has a higher number of neutrons per fission event, and a high probability of fission. It therefore held the prospect of saving some weight in fuel, but its radioactive properties make it more difficult to handle, and in any case it was not readily available. Highly enriched uranium was therefore chosen.
+
+
+For structural materials in the reactor, the choice came down to graphite or metals. Of the metals, tungsten emerged as the frontrunner, but it was expensive, hard to fabricate, and had undesirable neutronic properties. To get around its neutronic properties, it was proposed to use tungsten-184, which does not absorb neutrons. Graphite was chosen as it is cheap, gets stronger at temperatures up to 3,300Â K (3,030Â Â°C), and sublimes rather than melts at 3,900Â K (3,630Â Â°C).
+
+
+To control the reactor, the core was surrounded by control drums coated with graphite or beryllium (a neutron moderator) on one side and boron (a neutron poison) on the other. The reactor's power output could be controlled by rotating the drums. To increase thrust, it is sufficient to increase the flow of propellant. Hydrogen, whether in pure form or in a compound like ammonia, is an efficient nuclear moderator, and increasing the flow also increases the rate of reactions in the core. This increased reaction rate offsets the cooling provided by the hydrogen. As the hydrogen heats up, it expands, so there is less in the core to remove heat, and the temperature will level off. These opposing effects stabilize the reactivity and a nuclear rocket engine is therefore naturally very stable, and the thrust is easily controlled by varying the hydrogen flow without changing the control drums.
+
+
+LASL produced a series of design concepts, each with its own codename: Uncle Tom, Uncle Tung, Bloodhound and Shish. By 1955, it had settled on a 1,500 megawatt (MW) design called Old Black Joe. In 1956, this became the basis of a 2,700 MW design intended to be the upper stage of an ICBM.
+
+
+Transfer to NASA
+
+By 1957, the Atlas missile project was proceeding well, and with smaller and lighter warheads becoming available, the need for a nuclear upper stage had all but disappeared. On 2 October 1957, the AEC proposed cutting Project Rover's budget, but the proposal was soon overtaken by events.
+
+
+Two days later, the Soviet Union launched Sputnik 1, the first artificial satellite. This fired fears and imaginations around the world and demonstrated that the Soviet Union had the capability to deliver nuclear weapons over intercontinental distances, and undermined American notions of military, economic and technological superiority. This precipitated the Sputnik crisis, and triggered the Space Race, a new area of competition in the Cold War. Anderson wanted to give responsibility for the US space program to the AEC, but US President Dwight D. Eisenhower responded by creating the National Aeronautics and Space Administration (NASA), which absorbed NACA.
+
+
+Donald A. Quarles, the Deputy Secretary of Defense, met with T. Keith Glennan, the new administrator of NASA, and Hugh Dryden, his deputy on 20 August 1958, the day after they were sworn into office at the White House, and Rover was the first item on the agenda. Quarles was eager to transfer Rover to NASA, as the project no longer had a military purpose. Silverstein, whom Glennan had brought to Washington, D.C., to organize NASA's spaceflight program, had long had an interest in nuclear rocket technology. He was the first senior NACA official to show interest in rocket research, had initiated investigation into the use of hydrogen as a rocket propellant, was involved in the Aircraft Nuclear Propulsion (ANP) project, built NASA's Plum Brook Reactor, and had created a nuclear rocket propulsion group at Lewis under Harold Finger.
+
+
+Responsibility for the non-nuclear components of Project Rover was officially transferred from the United States Air Force (USAF) to NASA on 1 October 1958, the day NASA officially became operational and assumed responsibility for the US civilian space program. Project Rover became a joint NASA-AEC project. Silverstein appointed Finger from Lewis to oversee the nuclear rocket development. On 29 August 1960, NASA created the Space Nuclear Propulsion Office (SNPO) to oversee the nuclear rocket project. Finger was appointed as its manager, with Milton Klein from AEC as his deputy.
+
+
+A formal "Agreement Between NASA and AEC on Management of Nuclear Rocket Engine Contracts" was signed by NASA Deputy Administrator Robert Seamans and AEC General Manager Alvin Luedecke on 1 February 1961. This was followed by an "Inter-Agency Agreement on the Program for the Development of Space Nuclear Rocket Propulsion (Project Rover)", which they signed on 28 July 1961. SNPO also assumed responsibility for SNAP, with Armstrong becoming assistant to the director of the Reactor Development Division at AEC, and Lieutenant Colonel G. M. Anderson, formerly the SNAP project officer in the disbanded Aircraft Nuclear Propulsion Office (ANPO), became chief of the SNAP Branch in the new division.
+
+
+On 25 May 1961, President John F. Kennedy addressed a joint session of Congress. "First," he announced, "I believe that this nation should commit itself to achieving the goal, before this decade is out, of landing a man on the moon and returning him safely to the earth." He then went on to say: "Secondly, an additional 23 million dollars, together with 7 million dollars already available, will accelerate development of the Rover nuclear rocket. This gives promise of someday providing a means for even more exciting and ambitious exploration of space, perhaps beyond the Moon, perhaps to the very end of the Solar System itself."
+
+
+Test site
+
+Nuclear reactors for Project Rover were built at LASL Technical Area 18 (TA-18), also known as the Pajarito Site. Fuel and internal engine components were fabricated in the Sigma complex at Los Alamos. Testing of fuel elements and other materials science was done by the LASL N Division at TA-46 using various ovens and later a custom test reactor, the Nuclear Furnace. Staff from the LASL Test (J) and Chemical Metallurgy Baker (CMB) divisions also participated in Project Rover. Two reactors were built for each engine; one for zero power critical experiments at Los Alamos and another used for full-power testing. The reactors were tested at very low power before being shipped to the test site.
+
+
+In 1956, the AEC allocated 127,200 hectares (314,000 acres) of an area known as Jackass Flats in Area 25 of the Nevada Test Site for use by Project Rover. Work commenced on test facilities there in mid-1957. All materials and supplies had to be brought in from Las Vegas. Test Cell A consisted of a farm of hydrogen gas bottles and a concrete wall 0.91 meters (3Â ft) thick to protect the electronic instrumentation from radiation from the reactor. The control room was located 3.2 kilometers (2Â mi) away. The plastic coating on the control cables was chewed by burrowing rodents and had to be replaced. The reactor was test-fired with its exhaust plume in the air so that any radioactive fission products picked up from the core could be safely dispersed.
+
+
+The reactor maintenance and disassembly building (R-MAD) was in most respects a typical hot cell used by the nuclear industry, with thick concrete walls, lead glass viewing windows, and remote manipulation arms. It was exceptional only for its size: 76 meters (250Â ft) long, 43 meters (140Â ft) and 19 meters (63Â ft) high. This allowed the engine to be moved in and out on a railroad car. The "Jackass and Western Railroad", as it was light-heartedly described, was said to be the world's shortest and slowest railroad. There were two locomotives: the electric L-1, which was remotely controlled, and the diesel-electric L-2, which was manually controlled, with radiation shielding around the cab.
+
+
+Test Cell C was supposed to be completed in 1960, but NASA and AEC did not request funds for additional construction that year; Anderson provided them anyway. Then there were construction delays, forcing him to personally intervene. In August 1961, the Soviet Union ended the nuclear test moratorium that had been in place since November 1958, so Kennedy resumed US testing in September. With a second crash program at the Nevada Test site, labor became scarce, and there was a strike.
+
+
+When that ended, the workers had to come to grips with the difficulties of dealing with hydrogen, which could leak through microscopic holes too small to permit the passage of other fluids. On 7 November 1961, a minor accident caused a violent hydrogen release. The complex finally became operational in 1964. SNPO envisaged the construction of a 20,000 MW nuclear rocket engine, so construction supervisor, Keith Boyer had the Chicago Bridge & Iron Company construct two gigantic 1,900,000-liter (500,000Â U.S.Â gal) cryogenic storage dewars. An engine maintenance and disassembly building (E-MAD) was added. It was larger than a football field, with thick concrete walls and shield bays where engines could be assembled and disassembled. There was also an engine test stand (ETS-1); two more were planned.
+
+
+There was also a radioactive material storage facility (RMSF). This was a 8.5 hectares (21 acres) site roughly equidistant from the E-MAD, Test Cell "C", and ETS-1. It was enclosed by a cyclone wire fence with quartz perimeter lighting. The single-track railroad that connected facilities carried one branch through a single main gate into the storage area, which then separated into seven spurs. Two spurs led into 55.3-square-meter (595Â sqÂ ft) bunkers. The facility was used to store a wide variety of radioactively contaminated items.
+
+
+In February 1962, NASA announced the establishment of the Nuclear Rocket Development Station (NRDS) at Jackass Flats, and in June an SNPO branch was established at Las Vegas (SNPO-N) to manage it. Construction workers were housed in Mercury, Nevada. Later thirty trailers were brought to Jackass Flats to create a village named "Boyerville" after the supervisor, Keith Boyer.
+
+
+Kiwi
+
+The first phase of Project Rover, Kiwi, was named after the flightless bird of the same name from New Zealand, as the Kiwi rocket engines were not intended to fly either. Their function was to verify the design and test the behavior of the materials used. The Kiwi program developed a series of non-flyable test nuclear engines, with the primary focus on improving the technology of hydrogen-cooled reactors. Between 1959 and 1964, a total of eight reactors were built and tested. Kiwi was considered to have served as a proof of concept for nuclear rocket engines.
+
+
+Kiwi A
+
+The first test of the Kiwi A, the first model of the Kiwi rocket engine, was conducted at Jackass Flats on 1 July 1959. Kiwi A had a cylindrical core 132.7 centimeters (50Â in) high and 83.8 centimeters (30Â in) in diameter. A central island contained heavy water that acted both as a coolant and as a moderator to reduce the amount of uranium oxide required. The control rods were located inside the island, which was surrounded by 960 graphite fuel plates loaded with 4-micrometer (0.00016Â in) uranium oxide fuel particles and a layer of 240 graphite plates. The core was surrounded by 43.2 centimeters (20Â in) of graphite wool moderator and encased in an aluminum shell. Gaseous hydrogen was used as a propellant, at a flow rate of 3.2 kilograms per second (7.1Â lb/s). Intended to produce 100 MW, the engine ran at 70 MW for 5 minutes. The core temperature was much higher than expected, up to 2,900Â K (2,630Â Â°C), due to cracking of the graphite plates, which was enough to cause some of the fuel to melt.
+
+
+A series of improvements were made for the next test on 8 July 1960 to create an engine known as Kiwi A Prime. The fuel elements were extruded into cylinders and coated with niobium carbide (NbC) to resist corrosion. Six were stacked end-to-end and then placed in the seven holes in the graphite modules to create 137-centimeter (54Â in) long fuel modules. This time the reactor attained 88 MW for 307 seconds, with an average core exit gas temperature of 2,178 K. The test was marred by three core module failures, but the majority suffered little or no damage. The test was observed by Anderson and delegates to the 1960 Democratic National Convention. At the convention, Anderson added support for nuclear rockets to the Democratic Party platform.
+
+
+The third and final test of the Kiwi A series was conducted on 19 October 1960. The Kiwi A3 engine used 27-inch (69Â cm) long cylindrical fuel elements in niobium carbide liners. The test plan called for the engine to be run at 50 MW (half power) for 106 seconds, and then at 92 MW for 250 seconds. The 50 MW power level was achieved with a propellant flow of 2.36 kilograms per second (5.2Â lb/s), but exit gas temperature was 1,861 K, which was over 300 K higher than expected. After 159 seconds, the power was increased to 90 MW. To stabilize the exit gas temperature at 2,173 K, the fuel rate was increased to 3.81 kilograms per second (8.4Â lb/s). It was later discovered that the neutronic power measuring system was incorrectly calibrated, and the engine was actually run at an average of 112.5 MW for 259 seconds, well above its design capacity. Despite this, the core suffered less damage than in the Kiwi A Prime test.
+
+
+Kiwi A was considered a success as a proof of concept for nuclear rocket engines. It demonstrated that hydrogen could be heated in a nuclear reactor to the temperatures required for space propulsion, and that the reactor could be controlled. Finger went ahead and called for bids from industry for the development of NASA's Nuclear Engine for Rocket Vehicle Application (NERVA) based upon the Kiwi engine design. Rover henceforth became part of NERVA; while Rover dealt with the research into nuclear rocket reactor design, NERVA involved the development and deployment of nuclear rocket engines, and the planning of space missions.
+
+
+Kiwi B
+
+LASL's original objective had been a 10,000 MW nuclear rocket engine capable of launching 11,000 kilograms (25,000Â lb) into a 480 kilometers (300Â mi) orbit. This engine was codenamed Condor, after the large flying birds, in contrast to the small flightless Kiwi. However, in October 1958, NASA had studied putting a nuclear upper stage on a Titan I missile, and concluded that in this configuration a 1,000 MW reactor upper stage could put 6,400 kilograms (14,000Â lb) into orbit. This configuration was used in studies of Nova, and became the goal of Project Rover. LASL planned to conduct two tests with Kiwi B, an intermediate 1,000 MW design, in 1961 and 1962, followed by two tests of Kiwi C, a prototype engine, in 1963, and have a reactor in-flight test (RIFT) of a production engine in 1964.
+
+
+For Kiwi B, LASL made several design changes to get the required higher performance. The central core was eliminated, the number of coolant holes in each hexagonal fuel element was increased from four to seven, and the graphite reflector was replaced with a 20-centimeter (8Â in) thick beryllium one. Although beryllium was more expensive, more difficult to fabricate, and highly toxic, it was also much lighter, resulting in a saving of 1,100 kilograms (2,500Â lb). Due to the delay in getting Test Cell C ready, some features intended for Kiwi C were also incorporated in Kiwi B2. These included a nozzle cooled by liquid hydrogen instead of water, a new Rocketdyne turbopump, and a bootstrap start, in which the reactor was started up under its own power only.
+
+
+The test of Kiwi B1A, the last test to use gaseous hydrogen instead of liquid, was initially scheduled for 7 November 1961. On the morning of the test, a leaking valve resulted in a violent hydrogen explosion that blew out the walls of the shed and injured several workers; many suffered ruptured eardrums, and one fractured a heel bone. The reactor was undamaged, but there was extensive damage to the test car and the instrumentation, resulting in the test being postponed for a month. A second attempt on 6 December was aborted when it was discovered that many of the diagnostic thermocouples had been installed backward. Finally, on 7 December, the test got under way. It was intended to run the engine at 270 MW for 300 seconds, but the test was scrammed after only 36 seconds at 225 MW because hydrogen fires started to appear. All the thermocouples performed correctly, so a great deal of useful data was obtained. The average hydrogen mass flow during the full power portion of the experiment was 9.1 kilograms per second (20Â lb/s).
+
+
+LASL next intended to test Kiwi B2, but structural flaws were found that required a redesign. Attention then switched to B4, a more radical design, but when they tried to put the fuel clusters into the core, the clusters were found to have too many neutrons, and it was feared that the reactor might unexpectedly start up. The problem was traced to absorption of water from the normally dry New Mexico air during storage. It was corrected by adding more neutron poison. After this, fuel elements were stored in an inert atmosphere. N Division then decided to test with the backup B1 engine, B1B, despite grave doubts about it based on the results of the B1A test, in order to obtain more data on the performance and behavior of liquid hydrogen. On startup on 1 September 1962, the core shook, but reached 880 MW. Flashes of light around the nozzle indicated that fuel pellets were being ejected; it was later determined that eleven had been. Rather than shut down, the testers rotated the drums to compensate, and were able to continue running at full power for a few minutes before a sensor blew and started a fire, and the engine was shut down. Most but not all of the test objectives were met.
+
+
+The next test of the series was of Kiwi B4A on 30 November 1962. A flame flash was observed when the reactor reached 120 MW. Power was increased to 210 MW, and held there for 37 seconds. Power was then increased to 450 MW, but flashes then became frequent, and the engine was shut down after 13 seconds. After the test it was discovered that 97% of the fuel elements were broken. The difficulties of using liquid hydrogen were appreciated, and the cause of the vibration and failures was diagnosed as hydrogen leaking into the gap between the core and the pressure vessel. Unlike a chemical engine that would likely have blown up after suffering damage, the engine remained stable and controllable throughout. The tests demonstrated that a nuclear rocket engine would be rugged and reliable in space.
+
+
+Kennedy visited Los Alamos on 7 December 1962 for a briefing on Project Rover. It was the first time a US president had visited a nuclear weapons laboratory. He brought with him a large entourage that included Lyndon Johnson, McGeorge Bundy, Jerome Wiesner, Harold Brown, Donald Hornig, Glenn Seaborg, Robert Seamans, Harold Finger and Clinton Anderson. The next day, they flew to Jackass Flats, making Kennedy the only president to ever visit a nuclear test site. Project Rover had received $187Â million in 1962, and AEC and NASA were asking for another $360Â million in 1963. Kennedy drew attention to his administration's budgetary difficulties, and his officials and advisors debated the future of Project Rover and the space program in general.
+
+
+Finger assembled a team of vibration specialists from other NASA centers, and along with staff from LASL, Aerojet and Westinghouse, conducted a series of "cold flow" reactor tests using fuel elements without fissionable material. Nitrogen, helium and hydrogen gas was pumped through the engine to induce vibrations. It was determined that they were caused by instability in the way the liquid flowed through the clearance gaps between adjacent fuel elements. A series of minor design changes were made to address the vibration problem. In the Kiwi B4D test on 13 May 1964, the reactor was automatically started and briefly run at full power (990 MW) with no vibration problems. The test had to be terminated after 64 seconds when nozzle tubes ruptured and caused a hydrogen leak around the nozzle that started a fire. Cooldown was performed with both hydrogen and 3,266 kilograms (7,200Â lb) of nitrogen gas. On inspection after the test, no damaged fuel elements were found.
+
+
+The final test was the Kiwi B4E test on 28 August in which the reactor was operated for twelve minutes, eight of which were at full power (937 MW). This was the first test to use uranium carbide pellets instead of uranium oxide, with a 0.0508-millimeter (0.002Â in) niobium carbide coating. These were found to oxidize on heating, causing a loss of carbon in the form of carbon monoxide gas. To minimize this, the particles were made larger (50 to 150 micrometers (0.0020 to 0.0059Â in) in diameter), and given a protective coating of pyrolytic graphite. On 10 September, Kiwi B4E was restarted, and run at 882 MW for two and a half minutes, demonstrating the ability of a nuclear rocket engine to be shut down and restarted.
+
+
+In September 1964, tests were conducted with a Kiwi B4 engine and PARKA, a Kiwi reactor used for testing at Los Alamos. The two reactors were run 4.9 meters (16Â ft), 2.7 meters (9Â ft) and 1.8 meters (6Â ft) apart, and measurements taken of reactivity. These tests showed that neutrons produced by one reactor did indeed cause fissions in another, but that the effect was negligible: 3, 12 and 24 cents respectively. The tests demonstrated that adjacent nuclear rocket engines would not interfere with each other, and could therefore be clustered, just as chemical ones often were.
+
+
+Phoebus
+
+The next step in LASL's research program was to build a larger reactor. The size of the core determines how much hydrogen, which is necessary for cooling, can be pushed through it; and how much uranium fuel can be loaded into it. In 1960, LASL began planning a 4,000 MW reactor with an 89-centimeter (35Â in) core as a successor to Kiwi. LASL decided to name it Phoebe, after the Greek Moon goddess. Another nuclear weapon project already had that name, though, so it was changed to Phoebus, an alternative name for Apollo. Phoebus ran into opposition from SNPO, which wanted a 20,000 MW reactor. LASL thought that the difficulties of building and testing such a large reactor were being taken too lightly; just to build the 4,000 MW design required a new nozzle and improved turbopump from Rocketdyne. A prolonged bureaucratic conflict ensued.
+
+
+In March 1963, SNPO and the Marshall Space Flight Center (MSFC) commissioned Space Technology Laboratories (STL) to produce a report on what kind of nuclear rocket engine would be required for possible missions between 1975 and 1990. These missions included early manned planetary interplanetary round-trip expeditions (EMPIRE), planetary swingbys and flybys, and a lunar shuttle. The conclusion of this nine-volume report, which was delivered in March 1965, and of a follow-up study, was that these missions could be carried out with a 4,100 MW engine with a specific impulse of 825 seconds (8.09Â km/s). This was considerably smaller than had originally been thought necessary. From this emerged a specification for a 5,000 MW nuclear rocket engine, which became known as NERVA II.
+
+
+LASL and SNPO came to an agreement that LASL would build two versions of Phoebus: the small Phoebus I, with an 89-centimeter (35Â in) core for testing advanced fuels, materials and concepts, and the larger 140-centimeter (55Â in) Phoebus II that would serve as a prototype for NERVA II. Both would be based on Kiwi. The focus was placed on achieving more power than was possible with Kiwi units and maintaining the maximum power for a longer duration. The work on Phoebus I was started in 1963, with a total of three engines being built, called 1A, 1B and 1C.
+
+
+Phoebus 1A was tested on 25 June 1965, and run at full power (1,090 MW) for ten and a half minutes. Unfortunately, the intense radiation environment caused one of the capacitance gauges to produce erroneous readings. When confronted by one gauge that said that the hydrogen propellant tank was nearly empty, and another that said that it was quarter full, and unsure which was correct, the technicians in the control room chose to believe the one that said it was quarter full. This was the wrong choice; the tank was indeed nearly empty, and the propellant ran dry. Without liquid hydrogen to cool it, the engine, operating at 2,270Â K (2,000Â Â°C), quickly overheated and exploded. About a fifth of the fuel was ejected; most of the rest melted.
+
+
+The test area was left for six weeks to give highly radioactive fission products time to decay. A grader with a rubber squeegee on its plow was used to pile up contaminated dirt so it could be scooped up. When this did not work, a 150Â kW (200Â hp) vacuum cleaner was used to pick up the dirt. Fragments on the test pad were initially collected by a robot, but this was too slow, and men in protective suits were used, picking up pieces with tongs and dropping then into paint cans surrounded by lead and mounted on small-wheeled dollies. That took care of the main contamination; the rest was chipped, swept, scrubbed, washed or painted away. The whole decontamination effort took four hundred people two months to complete, and cost $50,000. The average dose of radiation received by the clean up workers was 0.66 rems (0.0066Â Sv), while the maximum was 3 rems (0.030Â Sv); LASL limited its employees to 5 rems (0.050Â Sv) per annum.
+
+
+The next test was of Phoebus 1B. It was powered up on 10 February 1967, and run at 588 MW for two and a half minutes. To avoid a repeat of the mishap that had occurred to Phoebus 1A, a 30,000-liter (8,000Â U.S.Â gal), high pressure 5,200-kilopascal (750Â psi) cryogenic storage dewar was installed to provide an emergency liquid hydrogen supply in the event that there was a failure of the primary propellant supply system. A second test was conducted on 23 February 1967, when it was run for 46 minutes, of which 30 minutes were above 1,250 MW, and a maximum power of 1,450 MW and gas temperature of 2,444Â K (2,171Â Â°C) was achieved. The test was a success, but some corrosion was found.
+
+
+This was followed by a test of the larger Phoebus 2A. A preliminary low power (2,000 MW) run was conducted on 8 June 1968, then a full power run on 26 June. The engine was operated for 32 minutes, 12.5 minutes of which was above 4,000 MW, and a peak power of 4,082 MW was reached. At this point the chamber temperature was 2,256Â K (1,983Â Â°C), and total flow rate was 118.8 kilograms per second (262Â lb/s). The maximum power level could not be reached because at this point the temperatures of the clamp band segments connecting the core to the pressure vessel reached their limit of 417Â K (144Â Â°C). A third run was conducted on 18 July, reaching a power of 1,280 MW, a fourth later that day, with a power of around 3,500 MW. A puzzling anomaly was that the reactivity was lower than expected. The liquid hydrogen might have overchilled the beryllium reflector, causing it to somehow lose some of its moderating properties. Alternatively, there are two spin isomers of hydrogen: parahydrogen is a neutron moderator but orthohydrogen is a poison, and perhaps the high neutron flux had changed some of the parahydrogen to orthohydrogen.
+
+
+Pewee
+
+Pewee was the third phase of Project Rover. LASL reverted to bird names, naming it after the North American pewee. It was small, easy to test, and a convenient size for uncrewed scientific interplanetary missions or small nuclear "tugs". Its main purpose was to test advanced fuel elements without the expense of a full-sized engine. Pewee took only nineteen months to develop from when SNPO authorized it in June 1967 to its first full-scale test in December 1968.
+
+
+Pewee had a 53-centimeter (21Â in) core containing 36 kilograms (80Â lb) 402 fuel elements and 132 support elements. Of the 402 fuel elements, 267 were fabricated by LASL, 124 by the Westinghouse Astronuclear Laboratory, and 11 at the AEC's Y-12 National Security Complex. Most were coated with niobium carbide (NbC) but some were coated with zirconium carbide (ZrC) instead; most also had a protective molybdenum coating. There were concerns that a reactor so small might not achieve criticality, so zirconium hydride (a good moderator) was added, and the thickness of the beryllium reflector was increased to 20 centimeters (8Â in). There were nine control drums. The whole reactor, including the aluminum pressure vessel, weighed 2,570 kilograms (5,670Â lb).
+
+
+Pewee 1 was started up three times: for check out on 15 November 1968, for a short duration test on 21 November, and for a full power endurance test on 4 December. The full power test had two holds during which the reactor was run at 503 MW (1.2 MW per fuel element). The average exit gas temperature was 2,550Â K (2,280Â Â°C), the highest ever recorded by Project Rover. The chamber temperature was 2,750Â K (2,480Â Â°C), another record. The test showed that the zircon carbide was more effective at preventing corrosion than niobium carbide. No particular effort had been made to maximize the specific impulse, that not being the reactor's purpose, but Pewee achieved a vacuum specific impulse of 901 seconds (8.84Â km/s), well above the target for NERVA. So too was the average power density of 2,340Â MW/m3; the peak density reached 5,200Â MW/m3. This was 20% higher than Phoebus 2A, and the conclusion was that it might be possible to build a lighter yet more powerful engine still.
+
+
+LASL took a year to modify the Pewee design to solve the problem of overheating. In 1970, Pewee 2 was readied in Test Cell C for a series of tests. LASL planned to do twelve full-power runs at 2,427Â K (2,154Â Â°C), each lasting for ten minutes, with a cooldown to 540Â K (267Â Â°C) between each test. SNPO ordered LASL to return Pewee to E-MAD. The problem was the National Environmental Policy Act (NEPA), which President Richard Nixon had signed into law on 1 January 1970. SNPO believed that radioactive emissions were well within the guidelines, and would have no adverse environmental effects, but an environmental group claimed otherwise. SNPO prepared a full environmental impact study for the upcoming Nuclear Furnace tests. In the meantime, LASL planned a Pewee 3 test. This would be tested horizontally, with a scrubber to remove fission products from the exhaust plume. It also planned a Pewee 4 to test fuels, and a Pewee 5 to test afterburners. None of these tests were ever carried out.
+
+
+Nuclear Furnace
+
+The Nuclear Furnace was a small reactor only a tenth of the size of Pewee that was intended to provide an inexpensive means of conducting tests. Originally it was to be used at Los Alamos, but the cost of creating a suitable test site was greater than that of using Test Cell C. It had a tiny core 146 centimeters (57Â in) long and 34 centimeters (13Â in) in diameter that held 49 hexagonal fuel elements. Of these, 47 were uranium carbide-zirconium carbide "composite" fuel cells and two contained a seven-element cluster of single-hole pure uranium-zirconium carbide fuel cells. Neither type had previously been tested in a nuclear rocket propulsion reactor. In all, this was about 5Â kg of highly enriched (93%) uranium-235. To achieve criticality with so little fuel, the beryllium reflector was over 36 centimeters (14Â in) thick. Each fuel cell had its own cooling and moderating water jacket. Gaseous hydrogen was used instead of liquid to save money. A scrubber was developed.
+
+
+The objectives of the Nuclear Furnace tests were to verify the design, and test the new composite fuels. Between 29 June and 27 July 1972, NF-1 was operated four times at full power (44 MW) and a fuel exit gas temperature of 2,444Â K (2,171Â Â°C) for a total of 108.8 minutes. The NF-1 was operated 121.1 minutes with a fuel exit gas temperature above 2,222Â K (1,949Â Â°C). It also achieved an average power density 4,500 to 5,000Â MW/m3 with temperatures up to 2,500Â K (2,230Â Â°C). The scrubber worked well, although some krypton-85 leaked. The Environmental Protection Agency was able to detect minute amounts, but none outside the test range.
+
+
+The tests indicated that composite fuel cells would be good for two to six hours operation at 2,500 to 2,800Â K (2,230 to 2,530Â Â°C), which the carbide fuels would give similar performance at 3,000 to 3,200Â K (2,730 to 2,930Â Â°C), assuming that problems with cracking could be overcome with improved design. For ten hours of operation, graphite-matrix would be limited to 2,200 to 2,300Â K (1,930 to 2,030Â Â°C), the composite could go up to 2,480Â K (2,210Â Â°C), and the pure carbide to 3,000Â K (2,730Â Â°C). Thus, the test program ended with three viable forms of fuel cell.
+
+
+Safety tests
+
+In May 1961, Kennedy gave his approval for reactor in-flight tests (RIFT). In response, LASL established a Rover Flight Safety Office, and SNPO created a Rover Flight Safety Panel, which supported RIFT. NASA's RIFT planning called for up to four reactors to fall into the Atlantic Ocean. LASL had to determine what would happen when a reactor hit the water at several thousand kilometers per hour. In particular, it needed to know whether it would go critical or explode when flooded with seawater, a neutron moderator. There was also concern about what would happen when it sank 3.2 kilometers (2Â mi) down to the bottom of the Atlantic, where it would be under a crushing pressure. The possible impact on marine life, and indeed what marine life was down there, all had to be considered.
+
+
+LASL started by immersing fuel elements in water. It then went on to conduct a simulated water entry test (SWET) during which a 30-centimeter (12Â in) piston was used to force water into a reactor as fast as possible. To simulate an impact, a mock reactor was dropped onto concrete from a height of 23 meters (75Â ft). It bounced 4.6 meters (15Â ft) in the air; the pressure vessel was dented and many fuel elements were cracked but calculations showed that it would neither go critical nor explode. However, RIFT involved NERVA sitting atop a Saturn V rocket 91 meters (300Â ft) high. To find out what would happen if the booster exploded on the launch pad, a mock reactor was slammed into a concrete wall using a rocket sled. The core was compressed by 5%, and calculations showed that the core would indeed go critical and explode, with a force equivalent to about 2 kilograms (4.4Â lb) of high explosive, which would likely be negligible compared to the damage caused by an exploding booster. Disturbingly, this was much lower than the 11 kilograms (25Â lb) that was predicted theoretically, indicating that the mathematical modeling was deficient.
+
+
+ When it was determined that NERVA was not required for Apollo, and would therefore not be needed until the 1970s, RIFT was postponed, and then canceled entirely in December 1963. Although its reinstatement was frequently discussed, it never occurred. This eliminated the need for further SWET, but concerns remained about the safety of nuclear rocket engines. While an impact or an explosion could not cause a nuclear explosion, LASL was concerned about what would happen if the reactor overheated. A test was devised to create the most devastating catastrophe possible. A special test was devised known as Kiwi-TNT. Normally the control drums rotated at a maximum speed of 45Â° per second to the fully open position at 180Â°. This was too slow for the devastating explosion sought, so for Kiwi-TNT they were modified to rotate at 4,000Â° per second. The test was carried out on 12 January 1965. Kiwi-TNT was mounted on a flatbed railroad car, nicknamed the Toonerville Trolley, and parked 190 meters (630Â ft) from Test Cell C. The drums were rotated to the maximum setting at 4,000Â° per second and the heat vaporized some of the graphite, resulting in a colorful explosion that sent fuel elements flying through the air, followed by a highly radioactive cloud with radioactivity estimated at 1.6 megacuries (59Â PBq).
+
+
+Most of the radioactivity in the cloud was in the form of caesium-138, strontium-92, iodine-134, zirconium-97 and krypton-88, which have short half-lives measured in minutes or hours. The cloud rose 790 meters (2,600Â ft) into the air and drifted southwest, eventually blowing over Los Angeles and out to sea. It was tracked by two Public Health Service (PHS) aircraft which took samples. The PHS had issued film badge dosimeters to people living on the edge of the test area, and took milk samples from dairy farms in the cloud's path. They revealed that exposure to people living outside the Nevada Test Site was negligible. Radioactive fallout on the ground also dissipated rapidly. Search teams scoured the area collecting debris. The largest was a piece of the pressure vessel weighing 67 kilograms (148Â lb) which was found 230 meters (750Â ft) away; another, weighing 44 kilograms (98Â lb) was found 520 meters (1,700Â ft) away.
+
+
+The explosion was relatively small, estimated as being the equivalent of 90 to 140 kilograms (200 to 300Â lb) of black powder. It was far less violent than an explosion of TNT, and hence the large pieces that were found. The test showed that the reactor could not be destroyed in space by blowing it up into small pieces, so another method had to be found for disposing of it at the end of a space mission. LASL decided to take advantage of the engine's restartability to dispose of a nuclear rocket by firing it into a high orbit, where it would either remain indefinitely, or via orbital decay return to Earth centuries later âby which time most of the radioactivity would have decayed away. The Soviet Union protested the test, claiming that it was a nuclear test in violation of the Partial Nuclear Test Ban Treaty, but the US replied that it was a subcritical test involving no explosion. However, the State Department was very unhappy with LASL's Kiwi-TNT designation, as this implied an explosion, and it made it harder to charge the Soviets with violating the treaty.
+
+
+There were three fatal accidents during Project Rover. One worker was killed in a motor vehicle accident. Another died from burns after tipping gasoline on classified computer tapes and setting them alight to dispose of them. A third entered a nitrogen tank and was asphyxiated.
+
+
+Cancelation
+
+Rover was always a controversial project, and defending it from critics required a series of bureaucratic and political battles. In 1961, the Bureau of the Budget (BOB) and President's Science Advisory Committee (PSAC) mounted a challenge to Rover on the grounds of its cost, but this push was defeated by the JCAE, where Rover enjoyed the staunch support of Anderson and Howard Cannon in the Senate, and Overton Brooks and James G. Fulton in the House. PSAC and BOB tried again in 1964; NASA's budget requests were cut, but Rover emerged intact.
+
+
+In the late 1960s, the rising cost of the Vietnam War put increased pressure on budgets. Newly elected members of the House looked at Rover and NERVA with a critical eye, seeing it as a gateway to an expensive open-ended post-Apollo deep-space exploration program. But Rover retained influential support from Anderson, Cannon and Margaret Chase Smith from Maine in the Senate, and Fulton and George P. Miller (who replaced Brooks as chairman of the United States House Committee on Science, Space, and Technology on the latter's death in September 1961) in the House.
+
+
+Congress defunded NERVA II in the 1967 budget, but Johnson needed Anderson's support for his Medicare legislation, and on 7 February 1967 agreed to provide money for NERVA II from his own contingency fund. Klein, who had succeeded Finger as head of the SNPO in 1967, faced two hours of questioning on NERVA II before the House Committee on Science and Astronautics, which had cut the NASA budget. Defunding NERVA II saved $400Â million, mainly in new facilities that would be required to test it. AEC and NASA acquiesced, because it had been demonstrated that NERVA I could perform the missions expected of NERVA II.
+
+
+NERVA had many potential missions. NASA considered using Saturn V and NERVA on a "Grand Tour" of the Solar System. A rare alignment of the planets that happens every 174 years occurred between 1976 and 1980, allowing a spacecraft to visit Jupiter, Saturn, Uranus and Neptune. With NERVA, that spacecraft could weigh up to 24,000 kilograms (52,000Â lb). This was assuming NERVA had a specific impulse of only 825 seconds (8.09Â km/s); 900 seconds (8.8Â km/s) was more likely, and with that it could place a 77,000-kilogram (170,000Â lb) space station the size of Skylab into orbit around the Moon. Repeat trips to the Moon could be made with NERVA powering a nuclear shuttle. There was also the mission to Mars, which Klein diplomatically avoided mentioning, knowing that, even in the wake of the Apollo 11 Moon landing, the idea was unpopular with Congress and the general public.
+
+
+The cost-cutting pressure increased after Nixon replaced Johnson as president in 1969. NASA program funding was reduced in the 1969 budget, shutting down the Saturn V production line, but NERVA remained. Klein endorsed a plan whereby the Space Shuttle lifted a NERVA engine into orbit, then returned for the fuel and payload. This could be repeated, as the NERVA engine was restartable. NERVA retained the steadfast support of Anderson, Cannon and Smith, but Anderson was aging and tiring, and now delegated many of his duties to Cannon. NERVA received $88Â million in fiscal year (FY) 1970 and $85Â million in FY 1971, with funds coming jointly from NASA and the AEC.
+
+
+When Nixon tried to cancel NERVA in 1971, Anderson's and Smith's votes killed Nixon's pet project, the Boeing 2707 supersonic transport. It was a stunning defeat for the president. In the budget for FY 1972, funding for the shuttle was cut, but NERVA survived. Although its budget request was just $17.4Â million, Congress allocated $69Â million; Nixon spent only $29Â million of it.
+
+
+In 1972, Congress again supported NERVA. A bi-partisan coalition headed by Smith and Cannon appropriated $100Â million for it; a NERVA engine that would fit inside the shuttle's cargo bay was estimated to cost about $250Â million over a decade. They added a stipulation that there would be no more reprogramming NERVA funds to pay for other NASA activities. The Nixon administration decided to cancel NERVA anyway. On 5 January 1973, NASA announced that NERVA (and therefore Rover) was terminated.
+
+
+Staff at LASL and the Space Nuclear Systems Office (SNSO), as SNPO had been renamed in 1970, were stunned; the project to build a small NERVA that could be carried on board the Space Shuttle had been proceeding well. Layoffs began immediately, and the SNSO was abolished in June. After 17 years of research and development, Projects Rover and NERVA had spent about $1.4 billion, but no nuclear-powered rocket has ever flown.
+
+
+Legacy
+
+Nuclear rocket propulsion
+
+In 1983, the Strategic Defense Initiative ("Star Wars") identified missions that could benefit from rockets more powerful than chemical rockets, and some that could only be undertaken by such rockets. A nuclear propulsion project, SP-100, was created in February 1983 with the aim of developing a 100Â kW nuclear rocket system. The concept incorporated a pebble-bed reactor, a concept developed by James R. Powell at the Brookhaven National Laboratory, which promised higher temperatures and improved performance over NERVA. From 1987 to 1991 it was funded as a secret project codenamed Project Timber Wind.
+
+
+The proposed rocket was later expanded into a larger design after the project was transferred to the Space Nuclear Thermal Propulsion (SNTP) program at the Air Force Phillips Laboratory in October 1991. NASA conducted studies as part of its Space Exploration Initiative (SEI) but felt that SNTP offered insufficient improvement over the nuclear rockets developed by Project Rover, and was not required by any SEI missions. The SNTP program was terminated in January 1994, after about $200Â million was spent.
+
+
+An engine for interplanetary travel from Earth orbit to Mars orbit, and back, was studied in 2013 at the MSFC with a focus on nuclear thermal rocket engines. Since they are at least twice as efficient as the most advanced chemical engines, they allow quicker transfer times and increased cargo capacity. The shorter flight duration, estimated at 3â4 months with nuclear engines, compared to 8â9 months using chemical engines, would reduce crew exposure to potentially harmful and difficult to shield cosmic rays. Nuclear engines like the Pewee of Project Rover, were selected in the Mars Design Reference Architecture (DRA), and on 22 May 2019, Congress approved $125Â million in funding for the development of nuclear rockets. In January 2023, NASA and the Defense Advanced Research Projects Agency (DARPA) announced that they would collaborate on the development of a nuclear thermal rocket engine that would be tested in space to develop nuclear propulsion capability for use in crewed NASA missions to Mars.
+
+
+Site rehabilitation
+
+With the closure of the SNPO, the Nevada Operations Office of Department of Energy assumed responsibility for Jackass Flats. A radiological survey was carried out in 1973 and 1974, followed by a cleanup of severe radioactive contamination at the RMSF, R-MAD, ETS-1, and Test Cells A and C. The E-MAD was still in use, and was not part of the effort. Between 1978 and 1984, $1.624Â million was spent on clean up activities. Highly contaminated items removed included a Phoebus nozzle, and two 24.9-tonne (27.5-short-ton) and two 14-tonne (15-short-ton) reactor shields from the R-MAD. These were taken to radioactive waste management sites at Area 3 and Area 5. Some 5,563 cubic meters (7,276Â cuÂ yd) of contaminated soil and
+4,250 cubic meters (5,560Â cuÂ yd) of contaminated metal and concrete were also removed for disposal. Another 631 cubic meters (825Â cuÂ yd) of clean metal and equipment were removed as salvage.
+
+
+Test Cell A was demolished between December 2004 and July 2005. This involved the removal of toxic and hazardous materials that included asbestos and foil surrounding electrical conduits that contained levels of cadmium above landfill limits. Paint was found to contain polychlorinated biphenyl (PCB), but not above landfill limits. About 27 tonnes (30 short tons) of lead bricks were found in various places and removed. There were also some traces of uranium and plutonium. The main challenge was the demolition of the concrete shield wall containing traces of europium-151, europium-153 and cobalt-59, which neutron absorption transforms into radioactive europium-152, europium-154 and cobalt-60. Care had to be taken to avoid creating hazardous radioactive dust during the demolition of the wall, which was carried out with explosives. Demolition of the R-MAD facility commenced in October 2009 and was completed in August 2010.
+
+
+Reactor test summary
+
+Source: 
+
+
+Footnotes
+
+Notes
+
+References
+
+Further reading
+
+
+
+
