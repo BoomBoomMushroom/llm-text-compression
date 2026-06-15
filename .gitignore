@@ -2,3 +2,4 @@ tf_env/Lib
 /llm/trainingCheckpoints
 /llm/__pycache__
 /.env
+/data/wikipedia

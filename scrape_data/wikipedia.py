@@ -64,5 +64,5 @@ def downloadNPages(n: int=0):
         didDownload = downloadAndSaveRandomArticle()
         if didDownload: downloaded += 1
 
-downloadNPages(100)
+downloadNPages(1000)
 

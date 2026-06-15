@@ -5,8 +5,6 @@ import numpy as np
 import random
 import time
 
-import tensorflow as tf
-
 # SHUT UPP TENSORFLOWWWW, IM THROUGH WITH YOU
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
@@ -14,13 +12,7 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["TF_DETERMINISTIC_OPS"] = "1"
 os.environ["PYTHONHASHSEED"] = "0"
 
-def setModelSeed(newSeed: int):
-    random.seed(newSeed)
-    np.random.seed(newSeed)
-    tf.random.set_seed(newSeed)
-
-DEFAULT_SEED = 0
-setModelSeed(DEFAULT_SEED)
+import tensorflow as tf
 
 stringToEncode = "coda started making their obelisks and then theo made a lavacast and now those are the \"Rockets\" space X makes"
 #stringToEncode = input("Enter string to encode: ")
@@ -108,6 +100,7 @@ def generateCompressedText(stringToEncode: str) -> list[str]:
     # 1st character is already in
     for n in range(1, len(stringToEncode)):
         predictedCharacter, states = generateNextCharacter(stringToEncode[n-1], states)
+        #predictedCharacter, states = generateNextCharacter(stringToEncode[:n], states)
         correctCharacter = stringToEncode[n]
         
         if predictedCharacter == correctCharacter:
@@ -120,8 +113,7 @@ def generateCompressedText(stringToEncode: str) -> list[str]:
     
     return out
 
-def compressText(text: str, seed: int=0) -> bytearray:
-    setModelSeed(seed)
+def compressText(text: str, writeDashedText=False) -> bytearray:
     letters: list[str] = generateCompressedText(text)
     
     stringBitMask = 0b0
@@ -138,16 +130,18 @@ def compressText(text: str, seed: int=0) -> bytearray:
     
     out: bytearray = stringBitMaskAsBytes + lettersByteArray
     
-    dashedString = ['-' if c == None else c for c in letters]
-    dashedString = ''.join(dashedString)
-    print(dashedString)
-    print(bin(stringBitMask).split("b")[1])
+    if writeDashedText:
+        dashedString = ['-' if c == None else c for c in letters]
+        dashedString = ''.join(dashedString)
+        
+        print(dashedString)
+        print(bin(stringBitMask).split("b")[1])
     
     return out
 
-def decompressText(data: bytearray, seed: int=0) -> str:
-    setModelSeed(seed)
+def decompressText(data: bytearray) -> str:
     stringBitMask, bytesRead = readVarInt(data)
+    print(f"Bytes for mask: {bytesRead}")
     data = data[bytesRead:]
     
     bitMaskStr = bin(stringBitMask).split("b")[1]
@@ -158,6 +152,7 @@ def decompressText(data: bytearray, seed: int=0) -> str:
         
         # use the AI anyways, even if we're not going to use it's output since we need the state tree to be the same
         if len(out) > 0: nextChar, llmStates = generateNextCharacter(out[-1], llmStates)
+        #if len(out) > 0: nextChar, llmStates = generateNextCharacter(out, llmStates)
         
         if bit == "1":
             nextChar = bytes([data[0]]).decode("utf-8")
@@ -166,10 +161,19 @@ def decompressText(data: bytearray, seed: int=0) -> str:
     
     return out
 
+# idea: use RLE to compress that monster of a number out front. rle should work well since its a bit mask and has long runs of 0s or 1s
+compressed = compressText(stringToEncode, True)
+print("Compressed: ", compressed, "\n")
 
-useSeed = 10
-compressed = compressText(stringToEncode, useSeed)
-decompressed = decompressText(compressed, useSeed)
+with open("out.txt", "wb") as f: f.write(compressed)
+
+decompressed = decompressText(compressed)
 
 print(f"Results equal? {stringToEncode==decompressed}")
 print(decompressed)
+
+compressedSize = len(compressed)
+decompressedSize = len(bytearray(decompressed.encode("utf-8")))
+
+print(compressedSize, decompressedSize, (1-(compressedSize / decompressedSize)), compressedSize < decompressedSize)
+#"""

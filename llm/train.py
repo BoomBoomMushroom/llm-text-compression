@@ -121,16 +121,16 @@ checkpointPrefix = os.path.join(checkpointDir, "ckpt_{epoch}.weights.h5")
 checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpointPrefix, save_weights_only=True)
 
 # Train the model
-EPOCHS = 50
+EPOCHS = 150
 loadModel = None
 #loadModel = "./llm/trainingCheckpoints/ckpt_10.weights.h5"
-loadModel = "./llm/model.weights.h5"
+#loadModel = "./llm/model.weights.h5"
 
 if loadModel == None or loadModel == "":
     print("Starting training...")
     history = model.fit(dataset, epochs=EPOCHS, callbacks=[checkpoint_callback])
 else:
-    print(f"Loading weigths from `{loadModel}`")
+    print(f"Loading weights from `{loadModel}`")
     for input_example, _ in dataset.take(1): model(input_example) # force build weights
     model.load_weights(loadModel)
 
@@ -144,7 +144,7 @@ oneStepModel = OneStep(model, charsFromIds, idsFromChars)
 # Generate text
 start = time.time()
 states = None
-nextChar = tf.constant(['Alice '])
+nextChar = tf.constant(['Programming is '])
 result = [nextChar]
 
 for n in range(1000):

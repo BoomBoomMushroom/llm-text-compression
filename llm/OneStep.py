@@ -19,7 +19,7 @@ class OneStep(tf.keras.Model):
             dense_shape=[len(idsFromChars.get_vocabulary())])
         self.predictionMask = tf.sparse.to_dense(sparseMask)
 
-    @tf.function
+    #@tf.function
     def generate_one_step(self, inputs, states=None):
         # Convert strings to token IDs.
         inputChars = tf.strings.unicode_split(inputs, 'UTF-8')
@@ -34,9 +34,20 @@ class OneStep(tf.keras.Model):
         # Apply the prediction mask: prevent "[UNK]" from being generated.
         predictedLogits = predictedLogits + self.predictionMask
 
+        topResults = []
+        topValues, topIndices = tf.nn.top_k(predictedLogits, k=5)
+        for i in topIndices[0].numpy():
+            char = self.charsFromIds([i]).numpy()[0].decode("utf-8")
+            topResults.append(char)
+            print(char, end="")
+        print()
+
         # Sample the output logits to generate token IDs.
-        predictedIds = tf.random.categorical(predictedLogits, num_samples=1)
-        predictedIds = tf.squeeze(predictedIds, axis=-1)
+        #predictedIds = tf.random.categorical(predictedLogits, num_samples=1)
+        #predictedIds = tf.squeeze(predictedIds, axis=-1)
+        
+        #predictedIds = tf.argmax(predictedLogits, axis=-1) # this instead of the 2 previous lines
+        predictedIds = topIndices[:, 0]
 
         # Convert from token ids to characters
         predictedChars = self.charsFromIds(predictedIds)
