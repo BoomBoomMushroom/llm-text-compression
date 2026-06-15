@@ -1,9 +1,5 @@
 from typing import Any
-
 import os
-import numpy as np
-import random
-import time
 
 # SHUT UPP TENSORFLOWWWW, IM THROUGH WITH YOU
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
@@ -50,6 +46,23 @@ oneStepReloaded = getOneStepGenerator(model)
 
 # Actually compress and decompress it and stuff
 
+rankHistogram = {}
+misses = 0
+def printHistogram():
+    totalHits = sum(rankHistogram.values())
+    huffmanString = ""
+    
+    print("Histogram:")
+    for rank in sorted(rankHistogram):
+        count = rankHistogram[rank]
+        percent = (count / totalHits) * 100
+        print(f"Rank {rank}: {count:3d} ({percent:.1f}%)")
+        
+        huffmanString += vocabulary[rank] * count
+    
+    print("Huffman fit string:", huffmanString)
+    print(f"Misses: {misses} | Hits: {totalHits}")
+
 class BitReader:
     def __init__(self, data: bytearray):
         self.data = data
@@ -68,9 +81,84 @@ class BitReader:
         if advanceCounter: self.bitPos += 1
         return bit
 
+# Huffman coded "000000000000000000000000000000000000000000000011111111111122222222222222333334444455566777889  aaa"
+# index: (binaryCode, bitsNeeded)
+huffmanTree = {
+    0: (0b0, 1),
+    2: (0b110, 3),
+    1: (0b101, 3),
+    3: (0b1000, 4),
+    4: (0b11111, 5),
+    5: (0b10011, 5),
+    7: (0b10010, 5),
+    11: (0b11101, 5),
+    6: (0b111101, 6),
+    8: (0b111100, 6),
+    10: (0b111001, 6),
+    9: (0b111000, 6),
+}
+
+def encodeIndex(index: int) -> tuple[int, int]:
+    dataOut = 0b0
+    bitsWrote = 0
+    
+    #"""
+    dataOut = huffmanTree[index][0]
+    bitsWrote = huffmanTree[index][1]
+    
+    #print(dataOut, bitsWrote)
+    #"""
+    
+    """
+    # write the "read until we hit a 0" encoding
+    bitsWrote = index+1
+    if index == 0: dataOut = 0b0
+    if index == 1: dataOut = 0b10
+    if index == 2: dataOut = 0b110
+    if index == 3: dataOut = 0b1110
+    if index == 4: dataOut = 0b11110
+    if index == 5: dataOut = 0b111110
+    if index == 6: dataOut = 0b1111110 # worse case result, will give us an encoded size of 8 bits, or 1 byte ; which ties with encoding the entire letter
+    #"""
+    
+    return (dataOut, bitsWrote)
+
+def decodeIndex(bitReader: BitReader) -> int:
+    index = 0
+    
+    #"""
+    bitsRead = 0
+    huffmanData = 0
+    while bitsRead < 8:
+        bitsRead += 1
+        huffmanData <<= 1
+        huffmanData |= bitReader.readBit()
+        
+        didSetIndex = False
+        for key, value in huffmanTree.items():
+            if bitsRead != value[1]: continue
+            if huffmanData != value[0]: continue
+            
+            index = key
+            didSetIndex = True
+            break
+        if didSetIndex: break
+    #"""
+    
+    """
+    # read until we hit a 0
+    while True:
+        bit = bitReader.readBit()
+        if bit == 0: break
+        index += 1
+    #"""
+    
+    return index
+
+
 def generateNextCharacter(currentString: str, states=None) -> tuple[str, Any]:
     nextChar = tf.constant([ currentString ])
-    nextChars, states = oneStepReloaded.generateTopKNextCharacters(nextChar, states=states, k=7)
+    nextChars, states = oneStepReloaded.generateTopKNextCharacters(nextChar, states=states, k=12)
     predictedCharacter = nextChars[0].numpy()[0].decode("utf-8")
     
     nextChars = [ a.numpy()[0].decode("utf-8") for a in nextChars ]
@@ -83,22 +171,27 @@ def generateNextCharacter(currentString: str, states=None) -> tuple[str, Any]:
     return (predictedCharacter, states, nextChars)
 
 def generateCompressedText(stringToEncode: str) -> list[str]:
+    global rankHistogram
+    global misses
+    
     states = None
     out = [stringToEncode[0]]
 
     # 1st character is already in
     for n in range(1, len(stringToEncode)):
-        #predictedCharacter, states = generateNextCharacter(stringToEncode[n-1], states)
         predictedCharacter, states, topPredictedCharacters = generateNextCharacter(stringToEncode[n-1], states)
+        #predictedCharacter, states, topPredictedCharacters = generateNextCharacter(stringToEncode[:n], states)
         correctCharacter = stringToEncode[n]
         
         if correctCharacter in topPredictedCharacters:
             index = topPredictedCharacters.index(correctCharacter)
             out.append(index)
+            
+            rankHistogram[index] = rankHistogram.get(index, 0) + 1
         else:
             # Wrong letter, lets correct it
-            predictedCharacter = correctCharacter # why is this here? idk but ill leave it just in case
             out.append(correctCharacter)
+            misses += 1
     
     return out
 
@@ -116,17 +209,12 @@ def compressText(text: str, writeDashedText=False) -> bytearray:
             dataShifted += 1
             dataBytes |= 0b1
             
-            # huffman tree for top 4 results
-            dataBytes <<= (l+1)
-            dataShifted += (l+1)
+            # huffman tree for the index
+            bits, bitsWrote = encodeIndex(l)
             
-            if l == 0: dataBytes |= 0b0
-            if l == 1: dataBytes |= 0b10
-            if l == 2: dataBytes |= 0b110
-            if l == 3: dataBytes |= 0b1110
-            if l == 4: dataBytes |= 0b11110
-            if l == 5: dataBytes |= 0b111110
-            if l == 6: dataBytes |= 0b1111110 # worse case result, will give us an encoded size of 8 bits, or 1 byte ; which ties with encoding the entire letter
+            dataBytes <<= bitsWrote
+            dataShifted += bitsWrote
+            dataBytes |= bits
         else:
             dataBytes <<= 8
             dataShifted += 8
@@ -168,8 +256,6 @@ def decompressText(data: bytearray) -> str:
         extraBitsAtEnd <<= 1
         extraBitsAtEnd |= bit
     
-    print(f"Extra bits at the end: {extraBitsAtEnd}")
-    
     decompressedText = ""
     llmStates = None
     while True:
@@ -178,8 +264,8 @@ def decompressText(data: bytearray) -> str:
         nextChar = None
         
         # use the AI anyways, even if we're not going to use it's output since we need the state tree to be the same
-        #if len(out) > 0: nextChar, llmStates = generateNextCharacter(out[-1], llmStates)
         if len(decompressedText) > 0: nextChar, llmStates, topPredictedCharacters = generateNextCharacter(decompressedText[-1], llmStates)
+        #if len(decompressedText) > 0: nextChar, llmStates, topPredictedCharacters = generateNextCharacter(decompressedText, llmStates)
         
         firstBitRead = bitReader.readBit(advanceCounter=False)
         
@@ -194,11 +280,7 @@ def decompressText(data: bytearray) -> str:
         elif firstBitRead == 1:
             bitReader.readBit() # discard that first bit since it doesn't get used in our index
 
-            index = 0
-            while True:
-                bit = bitReader.readBit()
-                if bit == 0: break
-                index += 1
+            index: int = decodeIndex(bitReader)
             nextChar = topPredictedCharacters[index]
         
         decompressedText += nextChar
@@ -207,8 +289,11 @@ def decompressText(data: bytearray) -> str:
     
     return decompressedText
 
+
 compressed = compressText(stringToEncode, True)
 print("Compressed: ", compressed, "\n")
+
+printHistogram()
 
 with open("out.txt", "wb") as f: f.write(compressed)
 
