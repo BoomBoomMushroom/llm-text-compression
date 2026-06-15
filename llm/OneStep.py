@@ -19,8 +19,7 @@ class OneStep(tf.keras.Model):
             dense_shape=[len(idsFromChars.get_vocabulary())])
         self.predictionMask = tf.sparse.to_dense(sparseMask)
 
-    #@tf.function
-    def generate_one_step(self, inputs, states=None):
+    def generateTopKNextCharacters(self, inputs, states=None, k: int=5):
         # Convert strings to token IDs.
         inputChars = tf.strings.unicode_split(inputs, 'UTF-8')
         inputIds = self.idsFromChars(inputChars).to_tensor()
@@ -33,24 +32,28 @@ class OneStep(tf.keras.Model):
         predictedLogits = predictedLogits/self.temperature
         # Apply the prediction mask: prevent "[UNK]" from being generated.
         predictedLogits = predictedLogits + self.predictionMask
-
+        
+        topValues, topIndices = tf.nn.top_k(predictedLogits, k=k)
         topResults = []
-        topValues, topIndices = tf.nn.top_k(predictedLogits, k=5)
-        for i in topIndices[0].numpy():
-            char = self.charsFromIds([i]).numpy()[0].decode("utf-8")
-            topResults.append(char)
-            print(char, end="")
-        print()
+        for i in range(0, k):
+            predictedIds = topIndices[:, i]
+            predictedChars = self.charsFromIds(predictedIds)
+            topResults.append(predictedChars)
+        
+        return topResults, states
 
-        # Sample the output logits to generate token IDs.
-        #predictedIds = tf.random.categorical(predictedLogits, num_samples=1)
-        #predictedIds = tf.squeeze(predictedIds, axis=-1)
+    #@tf.function
+    def generate_one_step(self, inputs, states=None):
+        
+        topResults, states = self.generateTopKNextCharacters(inputs, states, k=5)
         
         #predictedIds = tf.argmax(predictedLogits, axis=-1) # this instead of the 2 previous lines
-        predictedIds = topIndices[:, 0]
+        #predictedIds = topIndices[:, 0] # return the top result
 
         # Convert from token ids to characters
-        predictedChars = self.charsFromIds(predictedIds)
+        #predictedChars = self.charsFromIds(predictedIds)
+
+        predictedChars = topResults[0]
 
         # Return the characters and model state.
         return predictedChars, states
