@@ -52,64 +52,6 @@ oneStepReloaded = getOneStepGenerator(model)
 
 # RLE time?
 
-def writeVarInt4(value: int) -> bytearray:
-    SEGMENT_BITS = 0x0F
-    CONTINUE_BIT = 0x80
-    out = bytearray()
-    
-    while True:
-        if (value & ~SEGMENT_BITS) == 0:
-            out.append(value)
-            break
-        
-        out.append((value & SEGMENT_BITS) | CONTINUE_BIT)
-        value >>= 4
-    
-    return out
-
-def readVarInt4(value: int) -> tuple[int, int]:
-    SEGMENT_BITS = 0x0F
-    CONTINUE_BIT = 0x80
-    value = 0
-    shift = 0
-    i = 0
-    
-    while True:
-        b = data[i]
-        i += 1
-        value |= (b & SEGMENT_BITS) << shift
-        
-        if (b & CONTINUE_BIT) == 0: break
-        shift += 4
-    
-    return value, i
-
-
-binString = "10111100000001000000000100010000110000000000000101010000001011100000010000011000000000011110011100101001010101"
-char = "1"
-digitCounter = 0
-data = []
-while len(binString) > 0:
-    digit = binString[0]
-    if digit == char:
-        digitCounter += 1
-    else:
-        data.append( (char, digitCounter) )
-        char = digit
-        digitCounter = 1
-    
-    binString = binString[1:]
-
-print(data)
-
-# todo: take each one and pack these varint4's together and then we should have our ultimately compressed data <3
-#for _, c in data:
-for c in [16]:
-    byte: bytearray = writeVarInt4(c)
-    print(byte[0], hex(byte[0]))
-
-exit()
-
 class BitReader:
     def __init__(self, data: bytearray):
         self.data = data
@@ -161,6 +103,81 @@ def writeVarInt(value: int) -> bytearray:
         value >>= 7
     
     return output
+
+def readVarInt4(data: bytearray) -> tuple[int, int]:
+    SEGMENT_BITS = 0x07
+    CONTINUE_BIT = 0x08
+    value = 0
+    shift = 0
+    i = 0
+    
+    while True:
+        b = data[i]
+        i += 1
+        value |= (b & SEGMENT_BITS) << shift
+        
+        if (b & CONTINUE_BIT) == 0: break
+        shift += 3
+    
+    return value, i
+
+def writeVarInt4(value: int) -> bytearray:
+    SEGMENT_BITS = 0x07
+    CONTINUE_BIT = 0x08
+    out = bytearray()
+    
+    while True:
+        if (value & ~SEGMENT_BITS) == 0:
+            out.append(value)
+            break
+        
+        out.append((value & SEGMENT_BITS) | CONTINUE_BIT)
+        value >>= 3
+    
+    return out
+
+
+"""
+binString = "10111100000001000000000100010000110000000000000101010000001011100000010000011000000000011110011100101001010101"
+binStringLength = len(binString)
+char = "1"
+digitCounter = 0
+data = []
+while len(binString) > 0:
+    digit = binString[0]
+    if digit == char:
+        digitCounter += 1
+    else:
+        data.append( (char, digitCounter) )
+        char = digit
+        digitCounter = 1
+    
+    binString = binString[1:]
+
+print(data)
+
+rleVarIntBits = 0
+nybbles = 0
+
+# todo: take each one and pack these varint4's together and then we should have our ultimately compressed data <3
+for _, c in data:
+    byte: bytearray = writeVarInt(c)
+    print(f"{c} -> ", end="")
+    for b in byte:
+        nybbles += 1
+        print(f"{hex(b)} ", end="")
+    print()
+
+print(f"nybbles: {nybbles} | bytes: {nybbles/2} | original length: {binStringLength/8} Bytes")
+exit()
+"""
+
+for c in vocabulary:
+    char = bin(c.encode("utf-8")[0])
+    char = "0b" + char.split("0b")[1].zfill(8)
+    print(f"{c} -> {char}")
+
+exit()
 
 
 def generateNextCharacter(currentString: str, states=None) -> tuple[str, Any]:
