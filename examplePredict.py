@@ -50,139 +50,27 @@ oneStepReloaded = getOneStepGenerator(model)
 
 # Actually compress and decompress it and stuff
 
-# RLE time?
-
 class BitReader:
     def __init__(self, data: bytearray):
         self.data = data
         self.bitPos = 0
     
-    def readBit(self) -> int:
+    def countBitsRemaining(self) -> int:
+        return (len(self.data)*8) - self.bitPos
+    
+    def readBit(self, advanceCounter: bool=True) -> int:
         byteIndex = self.bitPos // 8
         bitIndex = 7 - (self.bitPos % 8) # so we read MSB first
         
         byte = self.data[byteIndex]
         bit = (byte >> bitIndex) & 1
         
-        self.bitPos += 1
+        if advanceCounter: self.bitPos += 1
         return bit
-
-def readVarInt(dataBuffer: bytes) -> tuple[int, int]: # value, bytes read
-    SEGMENT_BITS = 0x7F
-    CONTINUE_BIT = 0x80
-    value = 0
-    position = 0
-    currentByte = 0
-    currentByteIndex = 0
-    
-    while True:
-        currentByte = dataBuffer[currentByteIndex]
-        currentByteIndex += 1
-        
-        value |= (currentByte & SEGMENT_BITS) << position
-        if (currentByte & CONTINUE_BIT) == 0: break
-        
-        position += 7
-        #if position >= 32: raise Exception("VarInt is too big!")
-    
-    return (value, currentByteIndex)
-
-def writeVarInt(value: int) -> bytearray:
-    SEGMENT_BITS = 0x7F
-    CONTINUE_BIT = 0x80
-    output = bytearray(0)
-    
-    while True:
-        if (value & ~SEGMENT_BITS) == 0:
-            output.append(value)
-            break
-        
-        write = (value & SEGMENT_BITS) | CONTINUE_BIT
-        output.append(write)
-    
-        value >>= 7
-    
-    return output
-
-def readVarInt4(data: bytearray) -> tuple[int, int]:
-    SEGMENT_BITS = 0x07
-    CONTINUE_BIT = 0x08
-    value = 0
-    shift = 0
-    i = 0
-    
-    while True:
-        b = data[i]
-        i += 1
-        value |= (b & SEGMENT_BITS) << shift
-        
-        if (b & CONTINUE_BIT) == 0: break
-        shift += 3
-    
-    return value, i
-
-def writeVarInt4(value: int) -> bytearray:
-    SEGMENT_BITS = 0x07
-    CONTINUE_BIT = 0x08
-    out = bytearray()
-    
-    while True:
-        if (value & ~SEGMENT_BITS) == 0:
-            out.append(value)
-            break
-        
-        out.append((value & SEGMENT_BITS) | CONTINUE_BIT)
-        value >>= 3
-    
-    return out
-
-
-"""
-binString = "10111100000001000000000100010000110000000000000101010000001011100000010000011000000000011110011100101001010101"
-binStringLength = len(binString)
-char = "1"
-digitCounter = 0
-data = []
-while len(binString) > 0:
-    digit = binString[0]
-    if digit == char:
-        digitCounter += 1
-    else:
-        data.append( (char, digitCounter) )
-        char = digit
-        digitCounter = 1
-    
-    binString = binString[1:]
-
-print(data)
-
-rleVarIntBits = 0
-nybbles = 0
-
-# todo: take each one and pack these varint4's together and then we should have our ultimately compressed data <3
-for _, c in data:
-    byte: bytearray = writeVarInt(c)
-    print(f"{c} -> ", end="")
-    for b in byte:
-        nybbles += 1
-        print(f"{hex(b)} ", end="")
-    print()
-
-print(f"nybbles: {nybbles} | bytes: {nybbles/2} | original length: {binStringLength/8} Bytes")
-exit()
-"""
-
-for c in vocabulary:
-    char = bin(c.encode("utf-8")[0])
-    char = "0b" + char.split("0b")[1].zfill(8)
-    print(f"{c} -> {char}")
-
-exit()
-
 
 def generateNextCharacter(currentString: str, states=None) -> tuple[str, Any]:
     nextChar = tf.constant([ currentString ])
-    nextChars, states = oneStepReloaded.generateTopKNextCharacters(nextChar, states=states, k=4)
+    nextChars, states = oneStepReloaded.generateTopKNextCharacters(nextChar, states=states, k=7)
     predictedCharacter = nextChars[0].numpy()[0].decode("utf-8")
     
     nextChars = [ a.numpy()[0].decode("utf-8") for a in nextChars ]
@@ -217,45 +105,40 @@ def generateCompressedText(stringToEncode: str) -> list[str]:
 def compressText(text: str, writeDashedText=False) -> bytearray:
     letters: list[str] = generateCompressedText(text)
     
-    stringBitMask = 0b0
-    
     dataBytes: int = 0
-    dataShifted = 0
+    dataShifted = 3 # 3 bits are reserved for the "number of bits added to the end" header
     for l in letters:
         wasAiCorrect = type(l)==int
         
-        stringBitMask <<= 1
-        # write a 0 if we need to predict it, or a 1 if we explicitly need to write the character
-        bit = 0 if wasAiCorrect else 1
-        stringBitMask |= bit
-        
         if wasAiCorrect:
+            # Prepend a 1 to the index. since none of our vocab letters start with a 1 in utf-8 this perfect
+            dataBytes <<= 1
+            dataShifted += 1
+            dataBytes |= 0b1
+            
             # huffman tree for top 4 results
             dataBytes <<= (l+1)
             dataShifted += (l+1)
             
-            if l == 0:
-                #dataBytes <<= 1
-                #dataShifted += 1
-                dataBytes |= 0b0
-            if l == 1:
-                #dataBytes <<= 2
-                #dataShifted += 2
-                dataBytes |= 0b10
-            if l == 2:
-                #dataBytes <<= 3
-                #dataShifted += 3
-                dataBytes |= 0b110
-            if l == 3:
-                #dataBytes <<= 4
-                #dataShifted += 4
-                dataBytes |= 0b1110
+            if l == 0: dataBytes |= 0b0
+            if l == 1: dataBytes |= 0b10
+            if l == 2: dataBytes |= 0b110
+            if l == 3: dataBytes |= 0b1110
+            if l == 4: dataBytes |= 0b11110
+            if l == 5: dataBytes |= 0b111110
+            if l == 6: dataBytes |= 0b1111110 # worse case result, will give us an encoded size of 8 bits, or 1 byte ; which ties with encoding the entire letter
         else:
             dataBytes <<= 8
             dataShifted += 8
             dataBytes |= l.encode("utf-8")[0]
     
-    dataBytes <<= (8 - (dataShifted % 8)) # align the data to a byte
+    bitsAdded = (8 - (dataShifted % 8))
+    dataBytes <<= bitsAdded
+    dataShifted += bitsAdded
+    
+    # write the amount of extra bytes into here
+    dataBytes |= (bitsAdded & 0b111) << (dataShifted - 3)
+    #print(f"Bits added to end: {bitsAdded} | size: {dataShifted}")
     
     dataByteArray: bytearray = bytearray()
     while dataShifted > 0:
@@ -266,43 +149,51 @@ def compressText(text: str, writeDashedText=False) -> bytearray:
         dataShifted -= 8
     dataByteArray = dataByteArray[::-1] # reverse it since we put it in backwards
     
-    stringBitMaskAsBytes: bytearray = writeVarInt(stringBitMask)
-    out: bytearray = stringBitMaskAsBytes + dataByteArray
+    out: bytearray = dataByteArray
     
     if writeDashedText:
         dashedString = ['-' if type(c) == int else c for c in letters]
         dashedString = ''.join(dashedString)
         
         print(dashedString)
-        print(bin(stringBitMask).split("b")[1])
     
     return out
 
 def decompressText(data: bytearray) -> str:
-    stringBitMask, bytesRead = readVarInt(data)
-    print(f"Bytes for mask: {bytesRead}")
-    data = data[bytesRead:]
-    
     bitReader = BitReader(data)
     
-    bitMaskStr = bin(stringBitMask).split("b")[1]
-    out = ""
+    extraBitsAtEnd = 0
+    for _ in range(0, 3):
+        bit = bitReader.readBit()
+        extraBitsAtEnd <<= 1
+        extraBitsAtEnd |= bit
+    
+    print(f"Extra bits at the end: {extraBitsAtEnd}")
+    
+    decompressedText = ""
     llmStates = None
-    for bit in bitMaskStr:
+    while True:
+        if bitReader.countBitsRemaining() <= extraBitsAtEnd: break # at the end of the data
+        
         nextChar = None
         
         # use the AI anyways, even if we're not going to use it's output since we need the state tree to be the same
         #if len(out) > 0: nextChar, llmStates = generateNextCharacter(out[-1], llmStates)
-        if len(out) > 0: nextChar, llmStates, topPredictedCharacters = generateNextCharacter(out[-1], llmStates)
+        if len(decompressedText) > 0: nextChar, llmStates, topPredictedCharacters = generateNextCharacter(decompressedText[-1], llmStates)
         
-        if bit == "1":
+        firstBitRead = bitReader.readBit(advanceCounter=False)
+        
+        # none of our vocab characters starts with a 1 when encoded in utf-8
+        if firstBitRead == 0:
             byte = 0b0
             for i in range(0, 8):
                 byte <<= 1
                 byte |= bitReader.readBit()
             
             nextChar = bytes([byte]).decode("utf-8")
-        else:
+        elif firstBitRead == 1:
+            bitReader.readBit() # discard that first bit since it doesn't get used in our index
+
             index = 0
             while True:
                 bit = bitReader.readBit()
@@ -310,20 +201,12 @@ def decompressText(data: bytearray) -> str:
                 index += 1
             nextChar = topPredictedCharacters[index]
         
-        out += nextChar
-        
-        """
-        if bit == "1":
-            nextChar = bytes([data[0]]).decode("utf-8")
-            data = data[1:]
-        out += nextChar
-        """
+        decompressedText += nextChar
     
     print()
     
-    return out
+    return decompressedText
 
-# idea: use RLE to compress that monster of a number out front. rle should work well since its a bit mask and has long runs of 0s or 1s
 compressed = compressText(stringToEncode, True)
 print("Compressed: ", compressed, "\n")
 
@@ -338,4 +221,5 @@ compressedSize = len(compressed)
 decompressedSize = len(bytearray(decompressed.encode("utf-8")))
 
 print(compressedSize, decompressedSize, (1-(compressedSize / decompressedSize)), compressedSize < decompressedSize)
-#"""
+
+
