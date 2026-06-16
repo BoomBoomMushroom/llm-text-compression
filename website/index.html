@@ -5,108 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LLM Text Compression</title>
 
-    <style>
-        body{
-            background-color: #565656;
-            color: white;
-        }
-
-        #stayInLinePlease {
-            display: flex;
-            width: 100%;
-        }
-
-        .column{
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            
-            --wall-margin: 15%;
-            --middle-margin: 5%;
-        }
-        .column, button{
-            width: 30%;
-            aspect-ratio: 1 / .5;
-            font-size: 1.25cqi;
-            align-self: center;
-        }
-
-        .column, h2{
-            align-self: center;
-            margin-top: 20px;
-        }
-
-        #compress, #decompress{
-            width: 100%;
-            height: 200px;
-            resize: none;
-        }
-
-        #compress{
-            left: 0px;
-        }
-
-        #decompress{
-            right: 0px;
-        }
-
-        #toast{
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translate(-50%, 0%);
-
-            background-color: rgb(64, 121, 234);
-
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 10px;
-
-            display: none;
-        }
-
-        .hidden{
-            display: none;
-        }
-
-        .showToast{
-            animation: moveInFromTop 0.75s ease forwards;
-            display: block !important;
-        }
-        .hideToast{
-            animation: moveOutFromTop 0.5s ease forwards;
-            display: block !important;
-        }
-
-        @keyframes moveInFromTop {
-            0% {
-                display: none;
-                transform: translate(-50%, -100%);
-            }
-            100% {
-                display: block;
-                transform: translateY(-50%, 0%);
-            }
-        }
-        @keyframes moveOutFromTop {
-            0% {
-                opacity: 1;
-            }
-            99% {
-                opacity: 0;
-                transform: translate(-50%, 0%);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(-50%, -100%);
-            }
-        }
-
-        table, th, td {
-            border:1px solid white;
-            padding: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./toggleSwitch.css">
 </head>
 <body>
     <h1>LLM Text Compression</h1>
@@ -131,6 +31,36 @@
 
     <br>
     <h2 id="dashedStr" style="width: 100%; text-align:center"></h2>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h3>Enable Streaming? Streaming will allow you to watch the characters get decompressed in real time</h3>
+        
+        <!--  Taken from: https://uiverse.io/zl306/shy-falcon-59  -->
+        <label class="switch">
+            <input class="toggle" id="enableStreaming" type="checkbox" />
+            <span class="slider"></span>
+            <span class="card-side"></span>
+        </label>
+    </div>
+
+
+    <br>
+    <h1>Quick Note</h1>
+
+    <h2>The AI</h2>
+    <p>The next character predictor AI was trained on a collection of <i>featured</i> Wikipedia articles, which are free for the public to use under the creative commons license</p>
+    <p>The model was trained on Google Colab, and is trained to predict the next character in a sequence of characters. It only has a vocabulary of 63 characters. a-z, A-Z, 0-9, and a space</p>
+    <p>The model's weights are about 47.2 MB and can be found in the <a href="https://github.com/BoomBoomMushroom/llm-text-compression">Github repo</a> for this project. Feel free to run the model and code on your own computer, it runs moderately well on my Intel i7-9700F</p>
+
+    <h2>Practically</h2>
+    <p>Will this have widespread use? Probably not?</p>
+    <p>Is it better than <a href="https://huffman-coding-online.vercel.app/">huffman coding</a>? In 95% of the cases I tested,,, no.</p>
+    <p>Is it at all fast to compress or decompress? Not really, especially for longer text</p>
+    <p>For best preformance you'd need text in the latin alphabet, maybe favors English text since it was trained on it. The less punctuation and special characters the better.</p>
+    <div style="display: flex; align-items: baseline; gap: 10px;">
+        <h3><strong>But...</strong></h3>
+        <p>Was it fun to make? <strong>Yes</strong> of course!! I had lots of fun trying to optimize how I should store the data, and how to make the ai's predictions more accurate. All of that was really fun to do, and if I could, I would do it all over again</p>
+    </div>
 
     <br>
     <h1>How does it work?</h1>
@@ -391,7 +321,6 @@
 
         decompressElement.addEventListener("input", ()=>{
             let text = decompressElement.value.replace(/[^0-9a-f ]/gi, "");
-            //text = responseToReadable(fixCompressedText(text))
             decompressElement.value = text
             document.getElementById("decompressBytes").innerText = `Bytes: ${text.split(" ").length}`
             
@@ -421,7 +350,7 @@
             }, 10)
         }
 
-        async function sendPostRequest(url, data){
+        async function sendPostRequest(url, data, dataCallback, isStreaming){
             try{
                 let response = await fetch(url, {
                     method: "POST",
@@ -433,10 +362,81 @@
                 if(!response.ok){
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
-                let result = await response.json()
-                return result
+
+                if(isStreaming){
+                    let reader = response.body.getReader()
+                    let decoder = new TextDecoder()
+                    let fullText = ""
+                    while(true){
+                        let {done, value} = await reader.read()
+                        if(done){ break; }
+
+                        let chunk = decoder.decode(value, {stream: true});
+                        fullText += chunk
+                        dataCallback(chunk, isStreaming)
+                    }
+                    dataCallback({"text": fullText}, false) // send the full data so we can have the toast pop up
+                }
+                else{
+                    let result = await response.json()
+                    dataCallback(result, isStreaming)
+                }
             }
             catch(error){ console.error(error) }
+        }
+
+        function onDecompressFinish(response, isStreaming){
+            let newText = ""
+
+            if(isStreaming){
+                newText = compressElement.value + response // append the result
+            }
+            else{
+                try{
+                    if ("error" in response){ throw new Error("Response contains the error field") }
+                    if ("text" in response == false){ throw new Error("Response does not contain text") }
+
+                    giveToastNotification("Decompressed!", successColor)
+                    newText = response["text"]
+                }
+                catch{
+                    try{
+                        let errorMessage = response["error"]
+                        giveToastNotification(errorMessage, failColor)
+                    }
+                    catch{
+                        console.log(response)
+                        console.log("if the above message is undefined then the server might be down. Go check the network tab for some more info ig")
+                        
+                        giveToastNotification("Error! Check console and send @0xSabrina a message on slack!", failColor)
+                    }
+                }
+            }
+
+            compressElement.value = newText
+            compressElement.dispatchEvent(new Event('input', { bubbles: true }))
+        }
+
+        function onCompressFinish(response, isStreaming){
+            if(isStreaming){ new Error(`How are we streaming when we are compressing?!`); return; }
+
+            try{
+                giveToastNotification("Compressed!", successColor)
+                decompressElement.value = responseToReadable(response["data"])
+                decompressElement.dispatchEvent(new Event('input', { bubbles: true }))
+            }
+            catch{
+                try{
+                    let errorMessage = response["error"]
+                    giveToastNotification(errorMessage, failColor)
+                }
+                catch{
+                    console.log(response)
+                    console.log("if the above message is undefined then the server might be down. Go check the network tab for some more info ig")
+
+                    giveToastNotification("Error! Check console and send @0xSabrina a message on slack!", failColor)
+                }
+            }
         }
 
         function fixCompressedText(text){
@@ -468,24 +468,7 @@
 
             let response = await sendPostRequest(`${apiUrl}/compress`, {
                 "text": text
-            })
-            try{
-                giveToastNotification("Compressed!", successColor)
-                decompressElement.value = responseToReadable(response["data"])
-                decompressElement.dispatchEvent(new Event('input', { bubbles: true }))
-            }
-            catch{
-                try{
-                    let errorMessage = response["error"]
-                    giveToastNotification(errorMessage, failColor)
-                }
-                catch{
-                    console.log(response)
-                    console.log("if the above message is undefined then the server might be down. Go check the network tab for some more info ig")
-
-                    giveToastNotification("Error! Check console and send @0xSabrina a message on slack!", failColor)
-                }
-            }
+            }, onCompressFinish, false)
         }
         async function decompressFunction(){
             let data = fixCompressedText(decompressElement.value)
@@ -497,28 +480,12 @@
             giveToastNotification("Decompressing...")
             compressElement.value = ""
             decompressElement.value = responseToReadable(data)
-
+            
+            const isStreaming = document.getElementById("enableStreaming").checked
             let response = await sendPostRequest(`${apiUrl}/decompress`, {
-                "data": data
-            })
-            try{
-                if ("text" in response == false){ throw new Error("Response does not contain text") }
-                giveToastNotification("Decompressed!", successColor)
-                compressElement.value = response["text"]
-                compressElement.dispatchEvent(new Event('input', { bubbles: true }))
-            }
-            catch{
-                try{
-                    let errorMessage = response["error"]
-                    giveToastNotification(errorMessage, failColor)
-                }
-                catch{
-                    console.log(response)
-                    console.log("if the above message is undefined then the server might be down. Go check the network tab for some more info ig")
-                    
-                    giveToastNotification("Error! Check console and send @0xSabrina a message on slack!", failColor)
-                }
-            }
+                "data": data,
+                "isStreaming": isStreaming
+            }, onDecompressFinish, isStreaming)
         }
     </script>
 </body>

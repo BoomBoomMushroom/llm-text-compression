@@ -1,4 +1,4 @@
-from BitReader import BitReader
+from BitReaderWriter import BitReader
 
 # Huffman coded "000000000000000000000000000000000000000000000011111111111122222222222222333334444455566777889  aaa"
 # index: (binaryCode, bitsNeeded)

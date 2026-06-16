@@ -1,5 +1,6 @@
 from LoadModel import generateNextCharacter
 from IndexEncoderDecoder import encodeIndex
+from BitReaderWriter import BitWriter
 
 def generateCompressedText(stringToEncode: str, oneStepReloaded) -> list[str]:
     states = None
@@ -22,6 +23,7 @@ def generateCompressedText(stringToEncode: str, oneStepReloaded) -> list[str]:
 def compressText(text: str, oneStepReloaded, writeDashedText=False) -> bytearray:
     letters: list[str] = generateCompressedText(text, oneStepReloaded)
     
+    """
     dataBytes: int = 0
     dataShifted = 3 # 3 bits are reserved for the "number of bits added to the end" header
     for l in letters:
@@ -66,8 +68,24 @@ def compressText(text: str, oneStepReloaded, writeDashedText=False) -> bytearray
         dataBytes >>= 8
         dataShifted -= 8
     dataByteArray = dataByteArray[::-1] # reverse it since we put it in backwards
+    """
     
-    out: bytearray = dataByteArray
+    bw: BitWriter = BitWriter()
+    for l in letters:
+        wasAiCorrect = type(l)==int
+        
+        if wasAiCorrect:
+            bw.writeBit(0b1) # Prepend a 1 to the index. since none of our vocab letters start with a 1 in utf-8 this perfect
+            
+            # huffman tree for the index
+            bits, bitsWrote = encodeIndex(l)
+            bw.writeMultipleBits(bits, bitsWrote)
+        else:
+            bw.writeBit(0b0)
+            charBytes: bytes = l.encode("utf-8")
+            for charByte in charBytes: bw.writeMultipleBits(charByte, 8)
+    
+    out: bytearray = bw.finishWriting()
     
     if writeDashedText:
         dashedString = ['-' if type(c) == int else c for c in letters]

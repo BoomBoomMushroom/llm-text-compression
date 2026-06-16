@@ -1,8 +1,8 @@
-from BitReader import BitReader
+from BitReaderWriter import BitReader
 from LoadModel import generateNextCharacter
 from IndexEncoderDecoder import decodeIndex
 
-def decompressText(data: bytearray, oneStepReloaded) -> str:
+def decompressTextStreaming(data: bytearray, oneStepReloaded):
     bitReader = BitReader(data)
     
     extraBitsAtEnd = 0
@@ -45,8 +45,10 @@ def decompressText(data: bytearray, oneStepReloaded) -> str:
             nextChar = topPredictedCharacters[index]
         
         decompressedText += nextChar
+        yield nextChar
     
-    print()
-    
-    return decompressedText
+    # no return
+
+def decompressText(data: bytearray, oneStepReloaded) -> str:
+    return "".join(decompressTextStreaming(data, oneStepReloaded))
 
