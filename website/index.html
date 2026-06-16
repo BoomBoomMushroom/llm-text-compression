@@ -144,7 +144,7 @@
     <p>If the item in the list is an integer then we get the hamming code for it, write a 1 bit and write those bits into our bit buffer</p>
     <p>If the item in the list is a character then we will write a 0 bit and then all the bytes for the UTF-8 encoded string</p>
     <p>We now calculate how many bits we need to add to align it to a byte</p>
-    <p>We now write how many bits we added into the header as 3 bits and we are done! Our compressed string</p>
+    <p>We now write how many bits we added into the header as 3 bits and we are done!</p>
 
     <h2>Decompression</h2>
     <p>The compressed binary has 2 parts. A 3 bit header, and the rest is the payload</p>
