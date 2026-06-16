@@ -4,8 +4,522 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LLM Text Compression</title>
+
+    <style>
+        body{
+            background-color: #565656;
+            color: white;
+        }
+
+        #stayInLinePlease {
+            display: flex;
+            width: 100%;
+        }
+
+        .column{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            
+            --wall-margin: 15%;
+            --middle-margin: 5%;
+        }
+        .column, button{
+            width: 30%;
+            aspect-ratio: 1 / .5;
+            font-size: 1.25cqi;
+            align-self: center;
+        }
+
+        .column, h2{
+            align-self: center;
+            margin-top: 20px;
+        }
+
+        #compress, #decompress{
+            width: 100%;
+            height: 200px;
+            resize: none;
+        }
+
+        #compress{
+            left: 0px;
+        }
+
+        #decompress{
+            right: 0px;
+        }
+
+        #toast{
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+
+            background-color: rgb(64, 121, 234);
+
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+
+            display: none;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        .showToast{
+            animation: moveInFromTop 0.75s ease forwards;
+            display: block !important;
+        }
+        .hideToast{
+            animation: moveOutFromTop 0.5s ease forwards;
+            display: block !important;
+        }
+
+        @keyframes moveInFromTop {
+            0% {
+                display: none;
+                transform: translate(-50%, -100%);
+            }
+            100% {
+                display: block;
+                transform: translateY(-50%, 0%);
+            }
+        }
+        @keyframes moveOutFromTop {
+            0% {
+                opacity: 1;
+            }
+            99% {
+                opacity: 0;
+                transform: translate(-50%, 0%);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -100%);
+            }
+        }
+
+        table, th, td {
+            border:1px solid white;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    Hi
+    <h1>LLM Text Compression</h1>
+
+    <div id="toast" class="hideToast">
+        <h2>Loading...</h2>
+    </div>
+
+    <div id="stayInLinePlease">
+        <div class="column" style="margin-left: var(--wall-margin); margin-right: var(--middle-margin);">
+            <textarea id="compress" maxlength="1500">Example text to compress</textarea>
+            <h2 id="compressBytes">Bytes: 0</h2>
+            <button onclick="compressFunction()">Compress</button>
+        </div>
+
+        <div class="column" style="margin-right: var(--wall-margin); margin-left: var(--middle-margin);">
+            <textarea placeholder="Hex data here" id="decompress"></textarea>
+            <h2 id="decompressBytes">Bytes: 0</h2>
+            <button onclick="decompressFunction()">Decompress</button>
+        </div>    
+    </div>
+
+    <br>
+    <h2 id="dashedStr" style="width: 100%; text-align:center"></h2>
+
+    <br>
+    <h1>How does it work?</h1>
+
+    <h2>Compression</h2>
+    <p>The compression algorithm is really quite simple. We have a list of either characters or indices, and it is initially filled with the first character of the string to compress</p>
+    <p>We now iterate through each character in the string starting from the 2nd one (index 1) and run the LLM on the previous states and what the previous character was. We generate the top 12 most probable next characters</p>
+    <p>We now check if the correct character is in that list of possible next characters, if it is we add it's index to the list. If it is not in the list then we add the character</p>
+    <p>Now, after we do that for every character in the input string, we iterate over the list to write the bits</p>
+    <p>we reserve 3 bits at the beginning of our bit buffer for the header</p>
+    <p>If the item in the list is an integer then we get the hamming code for it, write a 1 bit and write those bits into our bit buffer</p>
+    <p>If the item in the list is a character then we will write a 0 bit and then all the bytes for the UTF-8 encoded string</p>
+    <p>We now calculate how many bits we need to add to align it to a byte</p>
+    <p>We now write how many bits we added into the header as 3 bits and we are done! Our compressed string</p>
+
+    <h2>Decompression</h2>
+    <p>The compressed binary has 2 parts. A 3 bit header, and the rest is the payload</p>
+    <p>The 3 bit header just tells you how many bits at the end of the payload is for padding, which is used to align the data to 8 bits</p>
+    <p>The payload is make up of "packets." Each of which has a type, and a value. The 2 types of packets are Character packets and AI packets</p>
+    <ul>
+        <li>
+            <p><strong>The Character packet</strong> starts with a "0" and is a UTF-8 character for it's value. It can be 1, 2, 3, or 4 bytes in size depending on the first byte of the utf-8 character, as described in the UTF-8 standard</p>
+        </li>
+        <li>
+            <p><strong>The AI packet</strong> starts with a "1" and is followed by a binary number of a varied size. That binary number is a hamming code number, the table of which is below.</p>
+            <p>The hamming code resolves to an index between 0 and 11 (inclusive). That index is the packet's value</p>
+            <table>
+                <tr>
+                    <th>Index</th>
+                    <th>Hamming Code</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0b0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>0b110</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0b101</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>0b1000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>0b11111</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>0b10011</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>0b10010</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>0b11101</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>0b111101</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>0b111100</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>0b111001</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>0b111000</td>
+                </tr> 
+            </table>
+        </li>
+    </ul>
+
+    <p>To decompress the data we need a few things. We need the hamming code table to decode indices, and the LLM model to predict the next letter</p>
+    <p>After we read the 3 bit header we then get enter a loop until the remaining bits to read is less than or equal to the padding amount described in the header</p>
+    <p>We will store the decoded string in a variable, initially empty, as we do our loop</p>
+    <p>Each pass of our loop we will first have our LLM generate the 12 most likely next characters based on the last character in the decoded string.</p>
+    <p>Then we will determine which packet type we are reading. If it's a <strong>Character packet</strong> then we just write the value to the output. If it's an <strong>AI Packet</strong> then the character we write to the output is the (packet's value)th top most likely character.</p>
+    <pre>     So if the packet's value is `0` then the next character is the first item in the top most likely characters.</pre>
+    <p>We must always feed the AI the previous character even if our packet is a <strong>Character packet</strong> since we must preserve the state</p>
+    <p>After we handle every packet we should now have our decoded string!</p>
+    <p>For example, the data you have compressed above has these packets:</p>
+    <!--  The current compressed data packet  -->
+    <table>
+        <thead>
+            <tr>
+                <th>Packet Type</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="packetTableItems"></tbody>
+    </table>
+
+    <script>
+        class BitReader{
+            constructor(data){
+                this.data = data
+                this.bitPos = 0
+            }
+            countRemainingBits(){
+                return (this.data.length * 8) - this.bitPos
+            }
+            readBit(advanceCounter=true){
+                let byteIndex = Math.floor(this.bitPos / 8)
+                let bitIndex = 7 - (this.bitPos % 8)
+
+                let byte = this.data[byteIndex]
+                let bit = (byte >> bitIndex) & 1
+
+                if(advanceCounter){ this.bitPos++; }
+                return bit
+            }
+            readByte(advanceCounter=true){
+                let byte = 0b0
+                for(let i=0; i<8; i++){
+                    byte <<= 1
+                    byte |= this.readBit()
+                }
+                if(advanceCounter == false){ this.bitPos -= 8; }
+                return byte
+            }
+        }
+
+        class DecompressPacket{
+            constructor(isAi, value){
+                this.isAi = isAi
+                this.value = value
+            }
+        }
+
+        decodeIndexHuffmanTree = {
+            0: [0b0, 1],
+            2: [0b110, 3],
+            1: [0b101, 3],
+            3: [0b1000, 4],
+            4: [0b11111, 5],
+            5: [0b10011, 5],
+            7: [0b10010, 5],
+            11: [0b11101, 5],
+            6: [0b111101, 6],
+            8: [0b111100, 6],
+            10: [0b111001, 6],
+            9: [0b111000, 6],
+        }
+        let decodeIndexHuffmanTreeKeys = Object.keys(decodeIndexHuffmanTree)
+
+        function decodeIndex(bitReader){
+            bitsRead = 0
+            huffmanData = 0
+
+            while(bitsRead < 8){
+                bitsRead++;
+                huffmanData <<= 1
+                huffmanData |= bitReader.readBit()
+
+                for(let i=0; i<decodeIndexHuffmanTreeKeys.length; i++){
+                    let index = decodeIndexHuffmanTreeKeys[i]
+                    let data = decodeIndexHuffmanTree[index]
+
+                    if(data[1] != bitsRead){ continue; }
+                    if(data[0] != huffmanData){ continue; }
+                    return index
+                }
+            }
+            return -1
+        }
+
+        function bytesIntoDecodePackets(textHex){
+            textHex = responseToReadable(textHex)
+            let hexBytes = textHex.split(" ")
+            let bytes = []
+            try{ for(let i=0; i<hexBytes.length; i++){ bytes.push(parseInt(hexBytes[i], 16)) } }
+            catch(e){}
+            let bitReader = new BitReader(bytes)
+
+            let extraBits = (bitReader.readBit() << 2) | (bitReader.readBit() << 1) | bitReader.readBit()
+            let packets = []
+
+            while( bitReader.countRemainingBits() > extraBits ){
+                firstBit = bitReader.readBit()
+                if(firstBit == 0){
+                    let firstByte = bitReader.readByte(false)
+                    let bytesToRead = 0
+                    if ((firstByte & 0b10000000) == 0){ bytesToRead = 1 }
+                    if ((firstByte & 0b11100000) == 0b11000000){ bytesToRead = 2 }
+                    if ((firstByte & 0b11110000) == 0b11100000){ bytesToRead = 3 }
+                    if ((firstByte & 0b11111000) == 0b11110000){ bytesToRead = 4 }
+
+                    let bytes = []
+                    for(let i=0; i<bytesToRead; i++){ bytes.push(bitReader.readByte()) }
+                    char = new TextDecoder("utf-8").decode(new Uint8Array(bytes))
+                    packets.push(new DecompressPacket(false, char))
+                }
+                else{
+                    // read the index
+                    let index = decodeIndex(bitReader)
+                    packets.push(new DecompressPacket(true, index))
+                }
+            }
+
+            loadPackets(packets)
+            let dashedStr = packetToDashedString(packets)
+            document.getElementById("dashedStr").innerText = dashedStr
+        }
+
+        function packetToDashedString(packets){
+            let out = ""
+            for(let i=0; i<packets.length; i++){
+                let p = packets[i]
+                out += p.isAi ? "-" : p.value
+            }
+            return out
+        }
+
+        function loadPackets(packets){
+            let tableItems = document.getElementById("packetTableItems")
+            tableItems.replaceChildren() // remove all old items
+            for(let i=0; i<packets.length; i++){
+                let p = packets[i]
+                
+                let ele = document.createElement("tr")
+                let typeEle = document.createElement("td")
+                typeEle.innerText = p.isAi ? "AI" : "Character"
+                ele.appendChild(typeEle)
+                let valueEle = document.createElement("td")
+                valueEle.innerText = p.value
+                ele.appendChild(valueEle)
+                tableItems.appendChild(ele)
+            }
+        }
+    </script>
+
+    <script>
+        const successColor = "#16ab39"
+        const failColor = "#cc2c1b"
+
+        let compressElement = document.getElementById("compress")
+        let decompressElement = document.getElementById("decompress")
+        const apiUrl = "http://127.0.0.1:5000"
+        
+        let toastElement = document.getElementById("toast")
+        let toastHideTimer = null
+
+        compressElement.addEventListener("input", ()=>{
+            document.getElementById("compressBytes").innerText = `Bytes: ${compressElement.value.length}`
+        })
+        compressElement.dispatchEvent(new Event('input', { bubbles: true }))
+
+        decompressElement.addEventListener("input", ()=>{
+            let text = decompressElement.value.replace(/[^0-9a-f ]/gi, "");
+            //text = responseToReadable(fixCompressedText(text))
+            decompressElement.value = text
+            document.getElementById("decompressBytes").innerText = `Bytes: ${text.split(" ").length}`
+            
+            bytesIntoDecodePackets( decompressElement.value )
+        })
+        decompressElement.dispatchEvent(new Event('input', { bubbles: true }))
+
+        function giveToastNotification(text, color){
+            if(color == null){ color = "rgb(64, 121, 234)" }
+            clearTimeout(toastHideTimer);
+            
+            toastElement.style.backgroundColor = color
+            toastElement.getElementsByTagName("h2")[0].innerText = text
+            toastElement.classList.add("hidden")
+            toastElement.classList.remove("showToast")
+            toastElement.classList.add("hideToast")
+
+            setTimeout(()=>{
+                toastElement.classList.remove("hidden")
+                toastElement.classList.remove("hideToast")
+                toastElement.classList.add("showToast")
+
+                toastHideTimer = setTimeout(()=>{
+                    toastElement.classList.remove("showToast")
+                    toastElement.classList.add("hideToast")
+                }, 5000)
+            }, 10)
+        }
+
+        async function sendPostRequest(url, data){
+            try{
+                let response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+                if(!response.ok){
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                let result = await response.json()
+                return result
+            }
+            catch(error){ console.error(error) }
+        }
+
+        function fixCompressedText(text){
+            text = text.replaceAll(" ", "")
+            text = text.replaceAll("0x", "")
+
+            return text
+        }
+
+        function responseToReadable(hexText){
+            hexText = fixCompressedText(hexText)
+            let out = ""
+            for(let i=0; i<hexText.length; i++){
+                if(i % 2 == 0 && i != 0){ out += " " }
+                out += hexText[i]
+            }
+            return out
+        }
+
+        async function compressFunction(){
+            let text = compressElement.value
+            if(text.length == 0){
+                giveToastNotification("You must type something!", failColor)
+                return
+            }
+
+            giveToastNotification("Compressing...")
+            decompressElement.value = ""
+
+            let response = await sendPostRequest(`${apiUrl}/compress`, {
+                "text": text
+            })
+            try{
+                giveToastNotification("Compressed!", successColor)
+                decompressElement.value = responseToReadable(response["data"])
+                decompressElement.dispatchEvent(new Event('input', { bubbles: true }))
+            }
+            catch{
+                try{
+                    let errorMessage = response["error"]
+                    giveToastNotification(errorMessage, failColor)
+                }
+                catch{
+                    console.log(response)
+                    console.log("if the above message is undefined then the server might be down. Go check the network tab for some more info ig")
+
+                    giveToastNotification("Error! Check console and send @0xSabrina a message on slack!", failColor)
+                }
+            }
+        }
+        async function decompressFunction(){
+            let data = fixCompressedText(decompressElement.value)
+            if(data.length == 0){
+                giveToastNotification("You must type something!", failColor)
+                return
+            }
+
+            giveToastNotification("Decompressing...")
+            compressElement.value = ""
+            decompressElement.value = responseToReadable(data)
+
+            let response = await sendPostRequest(`${apiUrl}/decompress`, {
+                "data": data
+            })
+            try{
+                if ("text" in response == false){ throw new Error("Response does not contain text") }
+                giveToastNotification("Decompressed!", successColor)
+                compressElement.value = response["text"]
+                compressElement.dispatchEvent(new Event('input', { bubbles: true }))
+            }
+            catch{
+                try{
+                    let errorMessage = response["error"]
+                    giveToastNotification(errorMessage, failColor)
+                }
+                catch{
+                    console.log(response)
+                    console.log("if the above message is undefined then the server might be down. Go check the network tab for some more info ig")
+                    
+                    giveToastNotification("Error! Check console and send @0xSabrina a message on slack!", failColor)
+                }
+            }
+        }
+    </script>
 </body>
 </html>

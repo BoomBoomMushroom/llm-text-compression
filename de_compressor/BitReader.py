@@ -15,3 +15,11 @@ class BitReader:
         
         if advanceCounter: self.bitPos += 1
         return bit
+    
+    def readByte(self, advanceCounter: bool=True) -> int:
+        byte = 0b0
+        for i in range(0, 8):
+            byte <<= 1
+            byte |= self.readBit()
+        if advanceCounter == False: self.bitPos -= 8
+        return byte

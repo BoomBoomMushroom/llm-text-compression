@@ -1,4 +1,5 @@
 import os
+from typing import Any
 
 # SHUT UPP TENSORFLOWWWW, IM THROUGH WITH YOU
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
@@ -9,8 +10,8 @@ os.environ["PYTHONHASHSEED"] = "0"
 
 import tensorflow as tf
 
-from llm.NextLetterModel import NextLetterModel
-from llm.OneStep import OneStep
+from NextLetterModel import NextLetterModel
+from OneStep import OneStep
 
 vocabulary = [
     "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", " ",

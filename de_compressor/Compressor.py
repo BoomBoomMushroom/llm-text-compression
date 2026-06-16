@@ -2,9 +2,6 @@ from LoadModel import generateNextCharacter
 from IndexEncoderDecoder import encodeIndex
 
 def generateCompressedText(stringToEncode: str, oneStepReloaded) -> list[str]:
-    global rankHistogram
-    global misses
-    
     states = None
     out = [stringToEncode[0]]
 
@@ -16,12 +13,9 @@ def generateCompressedText(stringToEncode: str, oneStepReloaded) -> list[str]:
         if correctCharacter in topPredictedCharacters:
             index = topPredictedCharacters.index(correctCharacter)
             out.append(index)
-            
-            rankHistogram[index] = rankHistogram.get(index, 0) + 1
         else:
             # Wrong letter, lets correct it
             out.append(correctCharacter)
-            misses += 1
     
     return out
 
@@ -46,9 +40,15 @@ def compressText(text: str, oneStepReloaded, writeDashedText=False) -> bytearray
             dataShifted += bitsWrote
             dataBytes |= bits
         else:
-            dataBytes <<= 8
-            dataShifted += 8
-            dataBytes |= l.encode("utf-8")[0]
+            dataBytes <<= 1
+            dataShifted += 1
+            dataBytes |= 0b0
+            
+            charBytes: bytes = l.encode("utf-8")
+            for charByte in charBytes:
+                dataBytes <<= 8
+                dataShifted += 8
+                dataBytes |= charByte
     
     bitsAdded = (8 - (dataShifted % 8))
     dataBytes <<= bitsAdded
