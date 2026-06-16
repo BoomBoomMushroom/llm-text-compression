@@ -309,7 +309,11 @@
 
         let compressElement = document.getElementById("compress")
         let decompressElement = document.getElementById("decompress")
-        const apiUrl = "http://127.0.0.1:5000"
+        let apiUrl = "http://127.0.0.1:5000"
+        
+        // change it to the production URL
+        apiUrl = "https://aicompressapi.sabrina.hackclub.app/"
+
         
         let toastElement = document.getElementById("toast")
         let toastHideTimer = null
